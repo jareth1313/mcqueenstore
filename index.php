@@ -332,113 +332,63 @@
         </div>
       </div>
     </section>
+                <!-- Sección de teléfonos -->
     <section id="mobile-products" class="product-store position-relative padding-large no-padding-top">
       <div class="container">
         <div class="row">
           <div class="display-header d-flex justify-content-between pb-3">
             <h2 class="display-7 text-dark text-uppercase">Productos Mobiles</h2>
+            <div class="">
+              <a href="formularios/producto.php" class="btn btn-medium btn-normal text-uppercase">Agregar producto</a>
+            </div>
             <div class="btn-right">
               <a href="shop.html" class="btn btn-medium btn-normal text-uppercase">Comprar</a>
             </div>
           </div>
           <div class="swiper product-swiper">
             <div class="swiper-wrapper">
+              <!-- Div para agregar los datos de un nuevo producto -->
+              <?php 
+                include('clases/Producto.php');
+                $producto=new Producto();
+                $respuesta=$producto->mostrarTodo();
+              ?>
+               <?php
+                while($row=mysqli_fetch_assoc($respuesta)){
+                ?>
               <div class="swiper-slide">
                 <div class="product-card position-relative">
                   <div class="image-holder">
-                    <img src="images/product-item1.jpg" alt="product-item" class="img-fluid">
+                    <img src="images/<?=$row['foto']?>" alt="product-item" class="img-fluid">
                   </div>
                   <div class="cart-concern position-absolute">
                     <div class="cart-button d-flex">
                       <a href="#" class="btn btn-medium btn-black">Añadir a carrito<svg class="cart-outline"><use xlink:href="#cart-outline"></use></svg></a>
                     </div>
-                  </div>
-                  <div class="card-detail d-flex justify-content-between align-items-baseline pt-3">
-                    <h3 class="card-title text-uppercase">
-                      <a href="#">Iphone 10</a>
-                    </h3>
-                    <span class="item-price text-primary">$980</span>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="product-card position-relative">
-                  <div class="image-holder">
-                    <img src="images/product-item2.jpg" alt="product-item" class="img-fluid">
-                  </div>
-                  <div class="cart-concern position-absolute">
                     <div class="cart-button d-flex">
-                      <a href="#" class="btn btn-medium btn-black">Añadir a carrito<svg class="cart-outline"><use xlink:href="#cart-outline"></use></svg></a>
+                      <?php
+                        echo '<a href="formularios/eliminar_producto.php?pk='.$row['pk_producto'].'" class="btn btn-medium btn-black">Eliminar producto<svg class="cart-outline"><use xlink:href="#cart-outline"></use></svg></a>';
+                      ?>
                     </div>
                   </div>
                   <div class="card-detail d-flex justify-content-between align-items-baseline pt-3">
                     <h3 class="card-title text-uppercase">
-                      <a href="#">Iphone 11</a>
+                      <a href="#"><?=$row['nom_prod']?></a>
                     </h3>
-                    <span class="item-price text-primary">$1100</span>
+                    <span class="item-price text-primary"><?=$row["precio"]?></span>
                   </div>
                 </div>
               </div>
-              <div class="swiper-slide">
-                <div class="product-card position-relative">
-                  <div class="image-holder">
-                    <img src="images/product-item3.jpg" alt="product-item" class="img-fluid">
-                  </div>
-                  <div class="cart-concern position-absolute">
-                    <div class="cart-button d-flex">
-                      <a href="#" class="btn btn-medium btn-black">Añadir a carrito<svg class="cart-outline"><use xlink:href="#cart-outline"></use></svg></a>
-                    </div>
-                  </div>
-                  <div class="card-detail d-flex justify-content-between align-items-baseline pt-3">
-                    <h3 class="card-title text-uppercase">
-                      <a href="#">Iphone 8</a>
-                    </h3>
-                    <span class="item-price text-primary">$780</span>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="product-card position-relative">
-                  <div class="image-holder">
-                    <img src="images/product-item4.jpg" alt="product-item" class="img-fluid">
-                  </div>
-                  <div class="cart-concern position-absolute">
-                    <div class="cart-button d-flex">
-                      <a href="#" class="btn btn-medium btn-black">Añadir a carrito<svg class="cart-outline"><use xlink:href="#cart-outline"></use></svg></a>
-                    </div>
-                  </div>
-                  <div class="card-detail d-flex justify-content-between align-items-baseline pt-3">
-                    <h3 class="card-title text-uppercase">
-                      <a href="#">Iphone 13</a>
-                    </h3>
-                    <span class="item-price text-primary">$1500</span>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="product-card position-relative">
-                  <div class="image-holder">
-                    <img src="images/product-item5.jpg" alt="product-item" class="img-fluid">
-                  </div>
-                  <div class="cart-concern position-absolute">
-                    <div class="cart-button d-flex">
-                      <a href="#" class="btn btn-medium btn-black">Añadir a carrito<svg class="cart-outline"><use xlink:href="#cart-outline"></use></svg></a>
-                    </div>
-                  </div>
-                  <div class="card-detail d-flex justify-content-between align-items-baseline pt-3">
-                    <h3 class="card-title text-uppercase">
-                      <a href="#">Iphone 12</a>
-                    </h3>
-                    <span class="item-price text-primary">$1300</span>
-                  </div>
-                </div>
-              </div>
+              <?php
+                }
+              ?> <!--  Aquí cierra el div de un producto -->
             </div>
           </div>
         </div>
       </div>
       <div class="swiper-pagination position-absolute text-center"></div>
     </section>
+    <!-- Sección de relojes -->
     <section id="smart-watches" class="product-store padding-large position-relative">
       <div class="container">
         <div class="row">
