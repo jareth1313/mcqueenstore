@@ -10,8 +10,8 @@
     <form action="validar.php" method="POST">
         <h2>Iniciar sesión</h2>
         <br>
-        <label>Usuario</label> <br>
-        <input type="text" name="username"> <br>
+        <label>Correo</label> <br>
+        <input type="text" name="correo"> <br>
         <label>Contraseña</label> <br>
         <input type="text" name="pass"> <br>
         <br>
