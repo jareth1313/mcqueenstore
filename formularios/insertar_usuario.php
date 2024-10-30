@@ -1,5 +1,5 @@
 <?php
-include('clases/Usuario.php');
+include('../clases/Usuario.php');
 $usuario=new Usuario();
 
 // obtener los datos
@@ -14,12 +14,12 @@ $resultado=$usuario->insertar($nom_usu, $ap_usu, $am_usu, $correo, $passwrd, 0);
 
 if($resultado){
     echo "<script>
-    alert('Guardado');
-    location.href='login.php'
+    alert('Usuario creado con exito');
+    location.href='../login.php'
     </script>";
 }else{
     echo "<script>
-    alert('Error');
+    alert('Ocurrio un error');
     location.href='formulario_usuario.php'
     </script>";
 }

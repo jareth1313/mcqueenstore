@@ -11,8 +11,8 @@ class Usuario{
         return $this->conexion->insert_id;
     }
 
-    function validar($nom_usu,$correo,$passwrd){
-        $consulta="SELECT * FROM usuario WHERE nom_usu='{$nom_usu}' OR correo='{$correo}' AND passwrd='{$passwrd}' AND estatus=1";
+    function validar($correo,$passwrd){
+        $consulta="SELECT * FROM usuario WHERE correo='{$correo}' AND passwrd='{$passwrd}' AND estatus=1";
         $respuesta=$this->conexion->query($consulta);
         return $respuesta;
     }

@@ -10,17 +10,17 @@
     <form action="validar.php" method="POST">
         <h2>Iniciar sesión</h2>
         <br>
-        <label>Correo</label> <br>
-        <input type="text" name="correo"> <br>
+        <label>Correo</label>  <br>
+        <input type="text" name="correo" required> <br>
         <label>Contraseña</label> <br>
-        <input type="text" name="pass"> <br>
+        <input type="text" name="pass" required> <br>
         <br>
         <input type="submit" value="Iniciar sesión">
         
         <br>
         <br>
         <label>¿Eres nuevo? Registrate ahora:</label> <br>
-        <a href="formulario_usuario.php">
+        <a href="formularios/formulario_usuario.php">
             <input type="button" value="Iniciar registro">
         </a>
 
