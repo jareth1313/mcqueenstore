@@ -7,17 +7,17 @@
 </head>
 <body>
 
-    <form action="insertar_usuario.php" method="POST" enctype="multipart/form-data">
+    <form action="insertar_usuario.php" method="POST">
         <label>Nombre de usuario:</label> <br>
-        <input type="text" name="username"> <br><br>
+        <input type="text" name="username" required> <br><br>
         <label>Apellido paterno:</label> <br>
-        <input type="text" name="apellido_paterno"> <br><br>
+        <input type="text" name="apellido_paterno" required> <br><br>
         <label>Apellido materno:</label> <br>
         <input type="text" name="apellido_materno"> <br><br>
         <label>Correo (e-mail):</label> <br>
-        <input type="text" name="correo"> <br><br>
+        <input type="text" name="correo" required> <br><br>
         <label>Contraseña:</label> <br>
-        <input type="password" name="pass"> <br><br>
+        <input type="password" name="pass" required> <br><br>
 
         <input type="submit" value="Guardar">
     </form>
