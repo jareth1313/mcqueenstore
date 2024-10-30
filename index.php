@@ -176,7 +176,7 @@
                       <a href="cart.html" class="dropdown-item">Cart</a>
                     </li>
                     <li>
-                      <a href="checkout.html" class="dropdown-item">Checkout</a>
+                      <a href="categorias.php" class="dropdown-item">Categorías</a>
                     </li>
                     <li>
                       <a href="single-post.html" class="dropdown-item">Single Post</a>
@@ -370,6 +370,7 @@
                         echo '<a href="formularios/eliminar_producto.php?pk='.$row['pk_producto'].'" class="btn btn-medium btn-black">Eliminar producto<svg class="cart-outline"><use xlink:href="#cart-outline"></use></svg></a>';
                       ?>
                     </div>
+                    
                   </div>
                   <div class="card-detail d-flex justify-content-between align-items-baseline pt-3">
                     <h3 class="card-title text-uppercase">
@@ -377,6 +378,11 @@
                     </h3>
                     <span class="item-price text-primary"><?=$row["precio"]?></span>
                   </div>
+                </div>
+                <div class="btn-primary">
+                  <?php
+                    echo '<a href="formularios/editar_producto.php?pk='.$row['pk_producto'].'" class="btn btn-medium btn-black">Actualizar producto</a>';
+                  ?>
                 </div>
               </div>
               <?php

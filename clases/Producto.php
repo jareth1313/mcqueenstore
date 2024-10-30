@@ -26,6 +26,18 @@ class Producto
         return $respuesta;
     }
 
+    function buscar($pk_producto){
+        $consulta="SELECT * FROM producto WHERE pk_producto='{$pk_producto}'";
+        $respuesta=$this->conexion->query($consulta);
+        return $respuesta;
+    }
+
+    function actualizar($pk_prod, $nom_prod, $descripcion, $precio, $tipo, $foto){
+        $consulta="UPDATE producto SET nom_prod='{$nom_prod}', descripcion='{$descripcion}', precio='{$precio}', tipo='{$tipo}', foto='{$foto}' WHERE pk_producto='{$pk_prod}'";
+        $respuesta=$this->conexion->query($consulta);
+        return $respuesta;
+    }
+
 
 
 
