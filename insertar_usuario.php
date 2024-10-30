@@ -15,7 +15,7 @@ $resultado=$usuario->insertar($nom_usu, $ap_usu, $am_usu, $correo, $passwrd, 0);
 if($resultado){
     echo "<script>
     alert('Guardado');
-    location.href='formulario_usuario.php'
+    location.href='login.php'
     </script>";
 }else{
     echo "<script>
