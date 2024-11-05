@@ -6,13 +6,20 @@ class Usuario{
     }
     
     function insertar($nom_usu, $ap_usu, $am_usu, $correo, $passwrd,$tipo){
-        $consulta="INSERT INTO usuario(pk_usuario, nom_usu, ap_usu, am_usu, correo, passwrd, tipo, estatus) VALUES (NULL, '{$nom_usu}', '{$ap_usu}', '{$am_usu}', '{$correo}', '{$passwrd}', '{$tipo}', 1)";
+        $consulta="INSERT INTO usuario(pk_usuario, nom_usu, ap_usu, am_usu, correo, passwrd, tipo_usu, estatus) VALUES (NULL, '{$nom_usu}', '{$ap_usu}', '{$am_usu}', '{$correo}', '{$passwrd}', '{$tipo}', 1)";
         $respuesta=$this->conexion->query($consulta);
         return $this->conexion->insert_id;
     }
 
     function validar($correo,$passwrd){
         $consulta="SELECT * FROM usuario WHERE correo='{$correo}' AND passwrd='{$passwrd}' AND estatus=1";
+        $respuesta=$this->conexion->query($consulta);
+        return $respuesta;
+    }
+
+    
+    function buscar($pkusuario){
+        $consulta="SELECT * FROM usuario where pk_usuario='{$pkusuario}'";
         $respuesta=$this->conexion->query($consulta);
         return $respuesta;
     }

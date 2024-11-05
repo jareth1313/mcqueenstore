@@ -1,3 +1,6 @@
+<?php
+    include('nav.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,9 +14,9 @@
         <h2>Iniciar sesión</h2>
         <br>
         <label>Correo</label>  <br>
-        <input type="text" name="correo" required> <br>
+        <input type="email" name="correo" required> <br>
         <label>Contraseña</label> <br>
-        <input type="text" name="pass" required> <br>
+        <input type="password" name="pass" required> <br>
         <br>
         <input type="submit" value="Iniciar sesión">
         

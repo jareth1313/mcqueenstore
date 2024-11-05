@@ -15,7 +15,7 @@
         <input class="" type="text" name="descripcion" required> <br>
 
         <label>Precio:</label> <br>
-        <input class="" type="text" name="precio"> <br>
+        <input class="" type="number" name="precio"> <br>
 
         <label>Tipo:</label> <br>
         <input class="" type="text" name="tipo" required> <br>
