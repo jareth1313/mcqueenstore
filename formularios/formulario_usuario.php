@@ -15,7 +15,7 @@
         <label>Apellido materno:</label> <br>
         <input type="text" name="apellido_materno"> <br><br>
         <label>Correo (e-mail):</label> <br>
-        <input type="text" name="correo" required> <br><br>
+        <input type="email" name="correo" required> <br><br>
         <label>Contraseña:</label> <br>
         <input type="password" name="pass" required> <br><br>
 

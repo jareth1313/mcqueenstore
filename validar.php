@@ -11,16 +11,19 @@ $num_rows=mysqli_num_rows($resultado);
 $datos=mysqli_fetch_assoc($resultado);
 
 if ($num_rows<=0){
-    echo "Correo o contraseña incorrecta";
+    echo "<script>
+            alert('Correo o contraseña incorrecta.');
+            location.href='login.php'
+        </script>"; 
 }else{
     # con esto inicia una sesión
     session_start();
     # creamos variables de sesión, solo funcionarán mientras una sesión esté activa
     $_SESSION['pk_usuario']=$datos['pk_usuario'];
-    $_SESSION['tipo']=$datos['tipo'];
+    $_SESSION['tipousu']=$datos['tipo_usu'];
     $_SESSION['username']=$datos['nom_usu'];
 
-    if($_SESSION['tipo']==1){
+    if($_SESSION['tipousu']==1){
         echo "<script>
             alert('Bienvenido! Eres un administrador.');
             location.href='index.php'

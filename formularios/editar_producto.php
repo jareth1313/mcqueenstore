@@ -28,7 +28,7 @@
         <input value="<?=$datos['descripcion']?>" class="controls" type="text" name="descripcion" required> <br>
 
         <label>Precio:</label> <br>
-        <input value="<?=$datos['precio']?>" class="controls" type="text" name="precio"> <br>
+        <input value="<?=$datos['precio']?>" class="controls" type="number" name="precio"> <br>
 
         <label>Tipo:</label> <br>
         <input value="<?=$datos['tipo']?>" class="controls" type="text" name="tipo" required> <br>
