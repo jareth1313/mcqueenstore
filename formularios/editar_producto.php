@@ -16,7 +16,7 @@
   $datos=mysqli_fetch_assoc($res);
 
 ?>
-  <form class="registro" action="actualizar_producto.php" method="POST" enctype="multipart/form-data">
+  <form class="" action="actualizar_producto.php" method="POST" enctype="multipart/form-data">
  
         <h2>Actualizar Producto</h2>
         <label>Nombre del Producto:</label> <br>
@@ -30,11 +30,17 @@
         <label>Precio:</label> <br>
         <input value="<?=$datos['precio']?>" class="controls" type="number" name="precio"> <br>
 
-        <label>Tipo:</label> <br>
-        <input value="<?=$datos['tipo']?>" class="controls" type="text" name="tipo" required> <br>
+        <label>Categoría:</label> <br>
+        <select name="pk_categoria" required> 
+            <option value="">Seleccione una categoría</option>
+            <?php
+              echo "<option value='".$datos['pk_categoria']."'>".$datos['nom_categoria']."</option>";
+            ?>
+        </select> <br>
 
         <label>Foto:</label> <br>
-        <input value="<?=$datos['foto']?>" class="controls" type="file" name="foto"> <br>
+        <input value="" class="controls" type="file" name="foto"> <br>
+        <input type="text" value="<?=$datos['foto']?>" name="foto_ante">
 
         <input class="btn" type="submit" value="Guardar">
 
