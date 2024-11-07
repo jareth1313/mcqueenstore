@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro McQueen</title>
-    <link rel="stylesheet" href="../css/formularios.css">
+    <link rel="stylesheet" href="../css/formularios.css?a=2">
 
 </head>
 <body>
