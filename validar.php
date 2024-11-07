@@ -20,11 +20,12 @@ if ($num_rows<=0){
     session_start();
     # creamos variables de sesión, solo funcionarán mientras una sesión esté activa
     $_SESSION['pk_usuario']=$datos['pk_usuario'];
-    $_SESSION['tipousu']=$datos['tipo_usu'];
+    $_SESSION['tipousu']=$datos['tipo'];
     $_SESSION['username']=$datos['nom_usu'];
 
     if($_SESSION['tipousu']==1){
         echo "<script>
+        // cambiar el alert con el jquery y que se quite automaticamente luego de 4segundos
             alert('Bienvenido! Eres un administrador.');
             location.href='index.php'
         </script>";    
