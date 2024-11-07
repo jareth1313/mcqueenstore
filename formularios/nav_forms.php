@@ -1,9 +1,9 @@
 <?php 
  session_start();
 if(isset($_SESSION['pk_usuario'])):
-  $ruta="usuario.php";
+  $ruta="../usuario.php";
 else:
-  $ruta="login.php";
+  $ruta="../login.php";
 endif;
 ?>
 
@@ -19,8 +19,8 @@ endif;
     <meta name="author" content="">
     <meta name="keywords" content="">
     <meta name="description" content="">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -161,7 +161,7 @@ endif;
             <div class="offcanvas-body">
               <ul id="navbar" class="navbar-nav text-uppercase justify-content-end align-items-center flex-grow-1 pe-3">
                 <li class="nav-item">
-                  <a class="nav-link me-4 active" href="index.php">Inicio</a>
+                  <a class="nav-link me-4 active" href="../index.php">Inicio</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link me-4" href="#company-services">Servicios</a>
@@ -188,7 +188,7 @@ endif;
                       <a href="cart.html" class="dropdown-item">Cart</a>
                     </li>
                     <li>
-                      <a href="categorias.php" class="dropdown-item">Categorías</a>
+                      <a href="../categorias.php" class="dropdown-item">Categorías</a>
                     </li>
                     <li>
                       <a href="single-post.html" class="dropdown-item">Single Post</a>
@@ -222,7 +222,7 @@ endif;
                       </li>
                       <li>
                         <!-- Carrito -->
-                        <a href="carrito.php">
+                        <a href="../carrito.php">
                           <svg class="cart">
                             <use xlink:href="#cart"></use>
                           </svg>
