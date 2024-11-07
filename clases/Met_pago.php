@@ -5,5 +5,12 @@ class Met_pago
         require_once('conexion.php');
         $this->conexion=new Conexion();
     }
+
+    function mostrarTodo(){
+        $consulta="SELECT * FROM met_pago";
+        $respuesta=$this->conexion->query($consulta);
+        return $respuesta;
+    }
+
 }
 ?>

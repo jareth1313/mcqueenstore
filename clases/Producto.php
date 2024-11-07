@@ -7,9 +7,9 @@ class Producto
         $this->conexion=new Conexion();
     }
 
-    function insertar($producto, $descripcion, $precio, $tipo, $foto){
-        $consulta="INSERT INTO producto (pk_producto, nom_prod, descripcion, precio, tipo, foto, estatus)
-        VALUES (NULL, '{$producto}', '{$descripcion}', '{$precio}', '{$tipo}', '{$foto}', 1)";
+    function insertar($producto, $descripcion, $precio, $foto, $fk_cate){
+        $consulta="INSERT INTO producto (pk_producto, nom_prod, descripcion, precio, foto, estatus, fk_categoria)
+        VALUES (NULL, '{$producto}', '{$descripcion}', '{$precio}', '{$foto}', 1, '{$fk_cate}')";
         $respuesta=$this->conexion->query($consulta);
         return $this->conexion->insert_id; 
     }
@@ -27,13 +27,13 @@ class Producto
     }
 
     function buscar($pk_producto){
-        $consulta="SELECT * FROM producto WHERE pk_producto='{$pk_producto}'";
+        $consulta="SELECT * FROM producto p INNER JOIN categoria c ON p.fk_categoria=c.pk_categoria WHERE pk_producto='{$pk_producto}'";
         $respuesta=$this->conexion->query($consulta);
         return $respuesta;
     }
 
-    function actualizar($pk_prod, $nom_prod, $descripcion, $precio, $tipo, $foto){
-        $consulta="UPDATE producto SET nom_prod='{$nom_prod}', descripcion='{$descripcion}', precio='{$precio}', tipo='{$tipo}', foto='{$foto}' WHERE pk_producto='{$pk_prod}'";
+    function actualizar($pk_prod, $nom_prod, $descripcion, $precio, $foto, $fk_cat){
+        $consulta="UPDATE producto SET nom_prod='{$nom_prod}', descripcion='{$descripcion}', precio='{$precio}', foto='{$foto}', fk_categoria='{$fk_cat}' WHERE pk_producto='{$pk_prod}'";
         $respuesta=$this->conexion->query($consulta);
         return $respuesta;
     }

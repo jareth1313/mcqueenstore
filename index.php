@@ -115,12 +115,18 @@ include('nav.php');
         <div class="row">
           <div class="display-header d-flex justify-content-between pb-3">
             <h2 class="display-7 text-dark text-uppercase">Productos Mobiles</h2>
-            <div class="">
-              <a href="formularios/producto.php" class="btn btn-medium btn-normal text-uppercase">Agregar producto</a>
-            </div>
             <div class="btn-right">
-              <a href="shop.html" class="btn btn-medium btn-normal text-uppercase">Comprar</a>
+                <?php
+                  if(isset($_SESSION['tipousu'])){
+                  if( $_SESSION['tipousu']==1){
+                      echo '<a href="formularios/producto.php" class="btn btn-medium btn-normal text-uppercase">Agregar producto</a>';
+                    }
+                  }
+                ?>
             </div>
+            <!-- <div class="btn-right">
+              <a href="shop.html" class="btn btn-medium btn-normal text-uppercase">Comprar</a>
+            </div> -->
           </div>
           <div class="swiper product-swiper">
             <div class="swiper-wrapper">
