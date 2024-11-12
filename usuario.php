@@ -14,23 +14,13 @@
     include('nav.php');
     include('clases/Usuario.php');
     $usu=new Usuario();
-    $respuesta=$usu->buscar($_SESSION['pk_usuario']);
-    ?>
 
+    if(isset($_SESSION['pk_usuario'])){
+        $respuesta=$usu->buscar($_SESSION['pk_usuario']);
+        ?>
     <div class="conteusu">
 
         <div class="conte">
-
-            <!-- <script>
-                fuction confirmar(){
-                    len res= comfirm"¿Seguro que desea cerrar la sesión?";
-
-                    if(res== true){
-                        window.location.href="cerrar_sesion.php";
-                    }
-                }
-            </script> -->
-
             <div class="mostrar-usu">
                 <?php
                 while($row=mysqli_fetch_assoc($respuesta)){
@@ -61,7 +51,12 @@
                 <a class="btnn" href="cerrar_sesion.php">Cerrar Sesión</a>
                 </div>
                 <?php
-                }
+                }} else{
+                    echo "<script>
+                    alert('Sesión no iniciada');
+                    location.href='login.php'
+                    </script>";
+                };
                 ?>
             </div>
         </div>

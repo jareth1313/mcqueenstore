@@ -1,5 +1,5 @@
 <?php
-    include('nav_forms.php');
+    include('nav.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +13,7 @@
 <body>
 
     <div class="register-container">
-        <form action="insertar_usuario.php" method="POST">
+        <form action="formularios/insertar_usuario.php" method="POST">
             <h2>Registro</h2>
 
             <label for="username">Nombre de usuario:</label>

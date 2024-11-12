@@ -7,19 +7,17 @@
 </head>
 
 <?php
-    include('../clases/Categorias.php');
+    include('nav.php');
+    include('clases/Categorias.php');
     $cat=new Categorias();
 
     $categorias=$cat->mostrarCategorias();
-
-
-
 ?>
 
 
 
 <body>
-    <form class="" action="agregar_producto.php" method="POST" enctype="multipart/form-data">
+    <form class="" action="formularios/agregar_producto.php" method="POST" enctype="multipart/form-data">
         <h2>Registrar Producto</h2>
         <label>Nombre del Producto:</label> <br>
         <input class="" type="text" name="producto" required> <br>

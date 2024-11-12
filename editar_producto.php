@@ -8,7 +8,8 @@
 <body>
     
 <?php 
-  include('../clases/Producto.php');
+  include('nav.php');
+  include('clases/Producto.php');
   $producto=new Producto();
   $fk=$_GET['pk'];
 
@@ -16,7 +17,7 @@
   $datos=mysqli_fetch_assoc($res);
 
 ?>
-  <form class="" action="actualizar_producto.php" method="POST" enctype="multipart/form-data">
+  <form class="" action="formularios/actualizar_producto.php" method="POST" enctype="multipart/form-data">
  
         <h2>Actualizar Producto</h2>
         <label>Nombre del Producto:</label> <br>
