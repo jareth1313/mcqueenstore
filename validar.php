@@ -20,7 +20,7 @@ if ($num_rows<=0){
     session_start();
     # creamos variables de sesión, solo funcionarán mientras una sesión esté activa
     $_SESSION['pk_usuario']=$datos['pk_usuario'];
-    $_SESSION['tipousu']=$datos['tipo'];
+    $_SESSION['tipousu']=$datos['tipo_usu'];
     $_SESSION['username']=$datos['nom_usu'];
 
     if($_SESSION['tipousu']==1){

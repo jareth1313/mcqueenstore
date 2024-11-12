@@ -1,5 +1,8 @@
+<?php 
+  include('nav.php');
+?>
 
-<form action="insertar_categ.php" method="POST">
+<form action="formularios/insertar_categ.php" method="POST">
     <label>Nombre de la categoría:</label> <br>
     <input type="text" name="nom_categoria" required> <br><br>
 

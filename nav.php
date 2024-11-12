@@ -111,7 +111,7 @@ endif;
             <button type="submit" class="search-submit"><svg class="search"><use xlink:href="#search"></use></svg></button>
           </form> -->
 
-          <h5 class="cat-list-title">Browse Categories</h5>
+          <!-- <h5 class="cat-list-title">Browse Categories</h5>
           
           <ul class="cat-list">
             <li class="cat-list-item">
@@ -135,7 +135,7 @@ endif;
             <li class="cat-list-item">
               <a href="#" title="Memory Cards">Memory Cards</a>
             </li>
-          </ul>
+          </ul> -->
 
         </div>
     </div>

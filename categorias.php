@@ -1,4 +1,4 @@
-<a href="formularios/form_categorias.php">Agregar Categorías</a>
+<a href="form_categorias.php">Agregar Categorías</a>
 
 <?php
     include('nav.php');
@@ -26,6 +26,4 @@
     <?php
     }
     ?>
-
-
 </table>
