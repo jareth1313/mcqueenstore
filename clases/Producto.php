@@ -38,6 +38,12 @@ class Producto
         return $respuesta;
     }
 
+    function mostrarPorId($idproducto){
+        $sql="SELECT * FROM producto WHERE pk_producto='{$idproducto}'";
+        $respuesta = $this->conexion->query($sql);
+        return $respuesta; 
+    }
+
 
 
 

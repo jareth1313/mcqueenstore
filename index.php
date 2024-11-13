@@ -135,6 +135,12 @@ include('nav.php');
                 include('clases/Producto.php');
                 $producto=new Producto();
                 $respuesta=$producto->mostrarTodo();
+
+                // if(isset($_SESSION['pk_usuario'])):
+                //   $ruta="usuario.php";
+                // else:
+                //   $ruta="login.php";
+                // endif;
               ?>
                <?php
                 while($row=mysqli_fetch_assoc($respuesta)){
@@ -146,7 +152,7 @@ include('nav.php');
                   </div>
                   <div class="cart-concern position-absolute">
                     <div class="cart-button d-flex">
-                      <a href="#" class="btn btn-medium btn-black">Añadir a carrito<svg class="cart-outline"><use xlink:href="#cart-outline"></use></svg></a>
+                    <?php echo '<a href="detalle_producto.php?pkproducto='.$row['pk_producto'].'" class="btn btn-medium btn-black">Ver Detalles<svg class="cart-outline"><use xlink:href="#cart-outline"></use></svg></a>' ?>
                     </div>
                   </div>
                   <div class="card-detail d-flex justify-content-between align-items-baseline pt-3">
