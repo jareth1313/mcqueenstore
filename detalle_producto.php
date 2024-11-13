@@ -23,7 +23,7 @@
 </style>
 <div>
     <div class="cuadro">
-        <img src="<?=$datos['foto']?>">
+        <img src="images/<?=$datos['foto']?>">
     </div>
     <div class="cuadro">
         <h2><?=$datos['nom_prod']?></h2>
