@@ -19,6 +19,23 @@ class Categorias
         $respuesta=$this->conexion->query($sql);
         return $respuesta;
     }
-}
 
+    function eliminarcategoria($pk){
+        $sql="DELETE FROM categoria WHERE pk_categoria='{$pk}'";
+        $respuesta=$this->conexion->query($sql);
+        return $respuesta;
+    }
+
+    function actualizarCat($pk_categoria, $nom_cat, $estatus){
+        $sql="UPDATE categoria SET nom_categoria='{$nom_cat}', estatus='{$estatus}' WHERE pk_categoria='{$pk_categoria}'";
+        $respuesta=$this->conexion->query($sql);
+        return $respuesta;
+    }
+
+    function buscarCat($pk_categoria){
+        $sql="SELECT * FROM categoria WHERE pk_categoria='{$pk_categoria}'";
+        $respuesta=$this->conexion->query($sql);
+        return $respuesta;
+    }
+}
 ?>
