@@ -7,10 +7,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login McQueen Store</title>
-    <link rel="stylesheet" href="css/formularios.css?a=2">
 </head>
-<body>
-    
+<body> 
     <div class="login-container">
         <form action="validar.php" method="POST">
             <h2>Iniciar sesión</h2>
@@ -25,7 +23,7 @@
             
             <div class="register">
                 <p>¿Eres nuevo?</p>
-                <p><a href="formularios/formulario_usuario.php">Regístrate ahora</a></p>
+                <p><a href="formulario_usuario.php">Regístrate ahora</a></p>
             </div>
         </form>
     </div>
