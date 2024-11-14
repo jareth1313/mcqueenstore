@@ -157,7 +157,7 @@ include('nav.php');
                   </div>
                   <div class="card-detail d-flex justify-content-between align-items-baseline pt-3">
                     <h3 class="card-title text-uppercase">
-                      <a href="#"><?=$row['nom_prod']?></a>
+                      <a><?=$row['nom_prod']?></a>
                     </h3>
                     <span class="item-price text-primary"><?=$row["precio"]."$"?></span>
                   </div>
