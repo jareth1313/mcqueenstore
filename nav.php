@@ -173,31 +173,25 @@ endif;
                   <a class="nav-link me-4" href="#smart-watches">Relojes</a>
                 </li>
                 <li class="nav-item dropdown">
-                  <a class="nav-link me-4 dropdown-toggle link-dark" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Pages</a>
+                  <a class="nav-link me-4 dropdown-toggle link-dark" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Páginas</a>
                   <ul class="dropdown-menu">
                     <li>
-                      <a href="about.html" class="dropdown-item">About</a>
-                    </li>
-                    <li>
-                      <a href="blog.html" class="dropdown-item">Blog</a>
-                    </li>
-                    <li>
-                      <a href="shop.html" class="dropdown-item">Shop</a>
-                    </li>
-                    <li>
-                      <a href="cart.html" class="dropdown-item">Cart</a>
+                      <a href="shop.html" class="dropdown-item">Comprar</a>
                     </li>
                     <li>
                       <a href="categorias.php" class="dropdown-item">Categorías</a>
                     </li>
                     <li>
-                      <a href="single-post.html" class="dropdown-item">Single Post</a>
+                      <a href="cart.html" class="dropdown-item">Carrito</a>
                     </li>
                     <li>
-                      <a href="single-product.html" class="dropdown-item">Single Product</a>
+                      <a href="blog.html" class="dropdown-item">Blog</a>
                     </li>
                     <li>
-                      <a href="contact.html" class="dropdown-item">Contact</a>
+                      <a href="contact.html" class="dropdown-item">Contáctanos</a>
+                    </li>
+                    <li>
+                      <a href="about.html" class="dropdown-item">Sobre nosotros</a>
                     </li>
                   </ul>
                 </li>

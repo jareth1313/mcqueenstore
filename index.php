@@ -9,7 +9,7 @@ include('nav.php');
               <div class="row d-flex align-items-center">
                 <div class="col-md-6">
                   <div class="banner-content">
-                    <h1 class="display-2 text-uppercase text-dark pb-5">Los mejores productos a mejores precios.</h1>
+                    <h1 class="display-2 text-uppercase text-dark pb-5">Donde la tecnología, la calidad y el diseño se encuentran.</h1>
                     <!-- <a href="shop.html" class="btn btn-medium btn-dark text-uppercase btn-rounded-none">Shop Product</a> -->
                   </div>
                 </div>
@@ -26,7 +26,7 @@ include('nav.php');
               <div class="row d-flex flex-wrap align-items-center">
                 <div class="col-md-6">
                   <div class="banner-content">
-                    <h1 class="display-2 text-uppercase text-dark pb-5">Technology Hack You Won't Get</h1>
+                    <h1 class="display-2 text-uppercase text-dark pb-5">Tecnología a tu alcance en el mejor lugar</h1>
                     <!-- <a href="shop.html" class="btn btn-medium btn-dark text-uppercase btn-rounded-none">Shop Product</a> -->
                   </div>
                 </div>
@@ -63,7 +63,7 @@ include('nav.php');
               </div>
               <div class="icon-box-content">
                 <h3 class="card-title text-uppercase text-dark">Envíos gratis</h3>
-                <p>Consectetur adipi elit lorem ipsum dolor sit amet.</p>
+                <p>Recibe todo lo que compres en la comodidad de tu casa.</p>
               </div>
             </div>
           </div>
@@ -75,8 +75,8 @@ include('nav.php');
                 </svg>
               </div>
               <div class="icon-box-content">
-                <h3 class="card-title text-uppercase text-dark">Quality guarantee</h3>
-                <p>Dolor sit amet orem ipsu mcons ectetur adipi elit.</p>
+                <h3 class="card-title text-uppercase text-dark">Garantía de calidad</h3>
+                <p>Satisfacción de compra garantizada con productos de la mejor calidad.</p>
               </div>
             </div>
           </div>
@@ -89,7 +89,7 @@ include('nav.php');
               </div>
               <div class="icon-box-content">
                 <h3 class="card-title text-uppercase text-dark">Ofertas diarias</h3>
-                <p>Amet consectetur adipi elit loreme ipsum dolor sit.</p>
+                <p>Encuentra ofertas atractivas cada día, no te las pierdas.</p>
               </div>
             </div>
           </div>
@@ -102,7 +102,7 @@ include('nav.php');
               </div>
               <div class="icon-box-content">
                 <h3 class="card-title text-uppercase text-dark">100% pagos seguros</h3>
-                <p>Rem Lopsum dolor sit amet, consectetur adipi elit.</p>
+                <p>Trámites de compra 100% seguros y sin riesgo.</p>
               </div>
             </div>
           </div>
@@ -114,7 +114,7 @@ include('nav.php');
       <div class="container">
         <div class="row">
           <div class="display-header d-flex justify-content-between pb-3">
-            <h2 class="display-7 text-dark text-uppercase">Productos Mobiles</h2>
+            <h2 class="display-7 text-dark text-uppercase">Celulares y Smartphones</h2>
             <div class="btn-right">
                 <?php
                   if(isset($_SESSION['tipousu'])){
@@ -295,9 +295,9 @@ include('nav.php');
       <div class="row d-flex flex-wrap align-items-center">
         <div class="col-md-6 col-sm-12">
           <div class="text-content offset-4 padding-medium">
-            <h3>10% off</h3>
-            <h2 class="display-2 pb-5 text-uppercase text-dark">New year sale</h2>
-            <a href="shop.html" class="btn btn-medium btn-dark text-uppercase btn-rounded-none">Shop Sale</a>
+            <h3>10% de descuento</h3>
+            <h2 class="display-2 pb-5 text-uppercase text-dark">Ventas de Año Nuevo</h2>
+            <a href="shop.html" class="btn btn-medium btn-dark text-uppercase btn-rounded-none">Comprar</a>
           </div>
         </div>
         <div class="col-md-6 col-sm-12">
@@ -309,9 +309,9 @@ include('nav.php');
       <div class="container">
         <div class="row">
           <div class="display-header d-flex justify-content-between pb-3">
-            <h2 class="display-7 text-dark text-uppercase">Latest Posts</h2>
+            <h2 class="display-7 text-dark text-uppercase">Últimas novedades</h2>
             <div class="btn-right">
-              <a href="blog.html" class="btn btn-medium btn-normal text-uppercase">Read Blog</a>
+              <a href="blog.html" class="btn btn-medium btn-normal text-uppercase">Leer blog</a>
             </div>
           </div>
           <div class="post-grid d-flex flex-wrap justify-content-between">
@@ -323,11 +323,11 @@ include('nav.php');
               </div>
               <div class="card-body text-uppercase">
                 <div class="card-meta text-muted">
-                  <span class="meta-date">feb 22, 2023</span>
-                  <span class="meta-category">- Gadgets</span>
+                  <span class="meta-date">22 de febrero, 2024</span>
+                  <span class="meta-category">- Accesorios</span>
                 </div>
                 <h3 class="card-title">
-                  <a href="#">Get some cool gadgets in 2023</a>
+                  <a href="#">Obten accesorios asombrosos este 2024</a>
                 </h3>
               </div>
             </div>
@@ -339,11 +339,11 @@ include('nav.php');
               </div>
               <div class="card-body text-uppercase">
                 <div class="card-meta text-muted">
-                  <span class="meta-date">feb 25, 2023</span>
-                  <span class="meta-category">- Technology</span>
+                  <span class="meta-date">25 de febrero, 2024</span>
+                  <span class="meta-category">- Tecnología</span>
                 </div>
                 <h3 class="card-title">
-                  <a href="#">Technology Hack You Won't Get</a>
+                  <a href="#">La mejor tecnología para tu vida</a>
                 </h3>
               </div>
             </div>
@@ -355,11 +355,11 @@ include('nav.php');
               </div>
               <div class="card-body text-uppercase">
                 <div class="card-meta text-muted">
-                  <span class="meta-date">feb 22, 2023</span>
-                  <span class="meta-category">- Camera</span>
+                  <span class="meta-date">17 de Marzo, 2023</span>
+                  <span class="meta-category">- Cámaras</span>
                 </div>
                 <h3 class="card-title">
-                  <a href="#">Top 10 Small Camera In The World</a>
+                  <a href="#">Lo mejor en cámaras compactas</a>
                 </h3>
               </div>
             </div>
@@ -382,36 +382,12 @@ include('nav.php');
                   <use xlink:href="#quote" />
                 </svg>
               </div>
+
               <div class="swiper-wrapper">
                 <div class="swiper-slide text-center d-flex justify-content-center">
                   <div class="review-item col-md-10">
                     <i class="icon icon-review"></i>
-                    <blockquote>“Tempus oncu enim pellen tesque este pretium in neque, .”</blockquote>
-                    <div class="rating">
-                    </div>
-                    <div class="author-detail">
-                      <div class="name text-dark text-uppercase pt-2">Emma Chamberlin</div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Con este bloque de código se agregan mas comentarios al swiper-slider -->
-                <div class="swiper-slide text-center d-flex justify-content-center">
-                  <div class="review-item col-md-10">
-                    <i class="icon icon-review"></i>
-                    <blockquote>“Tempus oncu enim pellen tesque este pretium in neque, .”</blockquote>
-                    <div class="rating">
-                    </div>
-                    <div class="author-detail">
-                      <div class="name text-dark text-uppercase pt-2">Jareth López</div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="swiper-slide text-center d-flex justify-content-center">
-                  <div class="review-item col-md-10">
-                    <i class="icon icon-review"></i>
-                    <blockquote>“A blog is a digital publication that can complement a website or exist independently. A blog may include articles, short posts, listicles, infographics, videos, and other digital content.”</blockquote>
+                    <blockquote>“Tienen buenos productos y mucha variedad para todo.”</blockquote>
                     <div class="rating">
                       <svg class="star star-fill">
                         <use xlink:href="#star-fill"></use>
@@ -423,14 +399,69 @@ include('nav.php');
                         <use xlink:href="#star-fill"></use>
                       </svg>
                       <svg class="star star-half">
-                        <use xlink:href="#star-half"></use>
+                        <use xlink:href="#star-fill"></use>
                       </svg>
                       <svg class="star star-empty">
-                        <use xlink:href="#star-empty"></use>
+                        <use xlink:href="#star-fill"></use>
                       </svg>
                     </div>
                     <div class="author-detail">
-                      <div class="name text-dark text-uppercase pt-2">Jennie Rose</div>
+                      <div class="name text-dark text-uppercase pt-2">Gema Gónzales</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Con este bloque de código se agregan mas comentarios al swiper-slider -->
+                <div class="swiper-slide text-center d-flex justify-content-center">
+                  <div class="review-item col-md-10">
+                    <i class="icon icon-review"></i>
+                    <blockquote>“Me encantó la calidad y en especial el buen servicio que ofrecen, contento.”</blockquote>
+                    <div class="rating">
+                      <svg class="star star-fill">
+                        <use xlink:href="#star-fill"></use>
+                      </svg>
+                      <svg class="star star-fill">
+                        <use xlink:href="#star-fill"></use>
+                      </svg>
+                      <svg class="star star-fill">
+                        <use xlink:href="#star-fill"></use>
+                      </svg>
+                      <svg class="star star-half">
+                        <use xlink:href="#star-fill"></use>
+                      </svg>
+                      <svg class="star star-empty">
+                        <use xlink:href="#star-fill"></use>
+                      </svg>
+                    </div>
+                    <div class="author-detail">
+                      <div class="name text-dark text-uppercase pt-2">Jareth López</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide text-center d-flex justify-content-center">
+                  <div class="review-item col-md-10">
+                    <i class="icon icon-review"></i>
+                    <blockquote>“Muy feliz me encanta comprar aquí, tienen ofertas muy buenas, muchos productos geniales y siempre cumplen con sus tiempos de entrega.”</blockquote>
+                    <div class="rating">
+                      <svg class="star star-fill">
+                        <use xlink:href="#star-fill"></use>
+                      </svg>
+                      <svg class="star star-fill">
+                        <use xlink:href="#star-fill"></use>
+                      </svg>
+                      <svg class="star star-fill">
+                        <use xlink:href="#star-fill"></use>
+                      </svg>
+                      <svg class="star star-half">
+                        <use xlink:href="#star-fill"></use>
+                      </svg>
+                      <svg class="star star-empty">
+                        <use xlink:href="#star-fill"></use>
+                      </svg>
+                    </div>
+                    <div class="author-detail">
+                      <div class="name text-dark text-uppercase pt-2">Jennifer Rosas</div>
                     </div>
                   </div>
                 </div>
@@ -450,11 +481,11 @@ include('nav.php');
       <div class="container">
         <div class="row">
           <div class="display-header text-uppercase text-dark text-center pb-3">
-            <h2 class="display-7">Shop Our Insta</h2>
+            <h2 class="display-7">Hecha un vistazo en Insta</h2>
           </div>
           <div class="d-flex flex-wrap">
             <figure class="instagram-item pe-2">
-              <a href="https://templatesjungle.com/" class="image-link position-relative">
+              <a href="" class="image-link position-relative">
                 <img src="images/insta-item1.jpg" alt="instagram" class="insta-image">
                 <div class="icon-overlay position-absolute d-flex justify-content-center">
                   <svg class="instagram">
@@ -464,7 +495,7 @@ include('nav.php');
               </a>
             </figure>
             <figure class="instagram-item pe-2">
-              <a href="https://templatesjungle.com/" class="image-link position-relative">
+              <a href="" class="image-link position-relative">
                 <img src="images/insta-item2.jpg" alt="instagram" class="insta-image">
                 <div class="icon-overlay position-absolute d-flex justify-content-center">
                   <svg class="instagram">
@@ -474,7 +505,7 @@ include('nav.php');
               </a>
             </figure>
             <figure class="instagram-item pe-2">
-              <a href="https://templatesjungle.com/" class="image-link position-relative">
+              <a href="" class="image-link position-relative">
                 <img src="images/insta-item3.jpg" alt="instagram" class="insta-image">
                 <div class="icon-overlay position-absolute d-flex justify-content-center">
                   <svg class="instagram">
@@ -484,7 +515,7 @@ include('nav.php');
               </a>
             </figure>
             <figure class="instagram-item pe-2">
-              <a href="https://templatesjungle.com/" class="image-link position-relative">
+              <a href="" class="image-link position-relative">
                 <img src="images/insta-item4.jpg" alt="instagram" class="insta-image">
                 <div class="icon-overlay position-absolute d-flex justify-content-center">
                   <svg class="instagram">
@@ -494,7 +525,7 @@ include('nav.php');
               </a>
             </figure>
             <figure class="instagram-item pe-2">
-              <a href="https://templatesjungle.com/" class="image-link position-relative">
+              <a href="" class="image-link position-relative">
                 <img src="images/insta-item5.jpg" alt="instagram" class="insta-image">
                 <div class="icon-overlay position-absolute d-flex justify-content-center">
                   <svg class="instagram">
@@ -515,7 +546,7 @@ include('nav.php');
               <div class="col-lg-3 col-sm-6 pb-3">
                 <div class="footer-menu">
                   <img src="images/main-logo.png" alt="logo">
-                  <p>Nisi, purus vitae, ultrices nunc. Sit ac sit suscipit hendrerit. Gravida massa volutpat aenean odio erat nullam fringilla.</p>
+                  <p>Explora nuestra tienda y descubre tecnología diseñada para transformar tu día a día. Innovación, calidad y estilo a un clic de distancia.</p>
                   <div class="social-links">
                     <ul class="d-flex list-unstyled">
                       <li>
@@ -559,44 +590,44 @@ include('nav.php');
               </div>
               <div class="col-lg-2 col-sm-6 pb-3">
                 <div class="footer-menu text-uppercase">
-                  <h5 class="widget-title pb-2">Quick Links</h5>
+                  <h5 class="widget-title pb-2">Enlaces rápidos</h5>
                   <ul class="menu-list list-unstyled text-uppercase">
                     <li class="menu-item pb-2">
                       <a href="#">Home</a>
                     </li>
                     <li class="menu-item pb-2">
-                      <a href="#">About</a>
+                      <a href="#">Sobre nosotros</a>
                     </li>
                     <li class="menu-item pb-2">
-                      <a href="#">Shop</a>
+                      <a href="#">Comprar</a>
                     </li>
                     <li class="menu-item pb-2">
                       <a href="#">Blogs</a>
                     </li>
                     <li class="menu-item pb-2">
-                      <a href="#">Contact</a>
+                      <a href="#">Contáctanos</a>
                     </li>
                   </ul>
                 </div>
               </div>
               <div class="col-lg-3 col-sm-6 pb-3">
                 <div class="footer-menu text-uppercase">
-                  <h5 class="widget-title pb-2">Help & Info Help</h5>
+                  <h5 class="widget-title pb-2">Ayúda e información adicional</h5>
                   <ul class="menu-list list-unstyled">
                     <li class="menu-item pb-2">
-                      <a href="#">Track Your Order</a>
+                      <a href="#">Rastrea tus pedidos</a>
                     </li>
                     <li class="menu-item pb-2">
-                      <a href="#">Returns Policies</a>
+                      <a href="#">Políticas de reembolso</a>
                     </li>
                     <li class="menu-item pb-2">
-                      <a href="#">Shipping + Delivery</a>
+                      <a href="#">Envío y Entrega</a>
                     </li>
                     <li class="menu-item pb-2">
-                      <a href="#">Contact Us</a>
+                      <a href="#">Contáctanos</a>
                     </li>
                     <li class="menu-item pb-2">
-                      <a href="#">Faqs</a>
+                      <a href="#">Preguntas frecuentes</a>
                     </li>
                   </ul>
                 </div>
@@ -606,7 +637,7 @@ include('nav.php');
                   <h5 class="widget-title text-uppercase pb-2">Contáctanos</h5>
                   <p>¿Tienes alguna duda o sugerencia? <a href="mailto:">mcqueenstore@gmail.com</a>
                   </p>
-                  <p>¿Ncesitas soporte? Solo llamanos. <a href="">+55 111 222 333 44</a>
+                  <p>¿Necesitas soporte? Solo llamanos. <a href="">+55 111 222 333 44</a>
                   </p>
                 </div>
               </div>
@@ -621,7 +652,7 @@ include('nav.php');
         <div class="row d-flex flex-wrap justify-content-between">
           <div class="col-md-4 col-sm-6">
             <div class="payment-method d-flex">
-              <p>Payment options:</p>
+              <p>Métodos de pago:</p>
               <div class="card-wrap ps-2">
                 <img src="images/visa.jpg" alt="visa">
                 <img src="images/mastercard.jpg" alt="mastercard">
@@ -631,7 +662,7 @@ include('nav.php');
           </div>
           <div class="col-md-4 col-sm-6">
             <div class="copyright">
-              <p>© Copyright 2023 MiniStore. Design by <a href="https://templatesjungle.com/">TemplatesJungle</a> Distribution by <a href="https://themewagon.com">ThemeWagon</a>
+              <!-- <p>© Copyright 2023 MiniStore. Design by <a href="https://templatesjungle.com/">TemplatesJungle</a> Distribution by <a href="https://themewagon.com">ThemeWagon</a> -->
               </p>
             </div>
           </div>

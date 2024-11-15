@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Usuario</title>
+    <link rel="stylesheet" href="css/usuario.css">
 </head>
 
 <body>
@@ -18,10 +19,10 @@
     if(isset($_SESSION['pk_usuario'])){
         $respuesta=$usu->buscar($_SESSION['pk_usuario']);
         ?>
-    <div class="conteusu">
+    <div class="conteusu" >
 
-        <div class="conte">
-            <div class="mostrar-usu">
+        <div class="conte" id="contUsuario">
+            <div class="mostrar-usu" id="opciones">
                 <?php
                 while($row=mysqli_fetch_assoc($respuesta)){
                     ?>
@@ -31,7 +32,7 @@
                     <a class="btn" href="historial.php">Historial de Compras</a>
                 </div>
 
-                <div class="xx">
+                <div class="xx" id="editarInfo">
                     <a class="btn" href="editar_info.php">Editar Información</a>
 
                     <label>Nombre:</label> <br>

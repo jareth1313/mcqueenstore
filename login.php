@@ -25,7 +25,7 @@
             
             <div class="register">
                 <p>¿Eres nuevo?</p>
-                <p><a href="formularios/formulario_usuario.php">Regístrate ahora</a></p>
+                <p><a href="formulario_usuario.php">Regístrate ahora</a></p>
             </div>
         </form>
     </div>
