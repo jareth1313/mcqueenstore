@@ -26,7 +26,7 @@
         <input class="" type="text" name="descripcion" required> <br>
 
         <label>Precio:</label> <br>
-        <input class="" type="number" name="precio"> <br><br>
+        <input class="" type="number" name="precio" required> <br><br>
 
         <select name="pk_categoria" required> 
             <option value="">Seleccione una categoría</option>
