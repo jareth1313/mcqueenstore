@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro McQueen</title>
-    <link rel="stylesheet" href="../css/formularios.css?a=2">
+    <link rel="stylesheet" href="css/formularios.css?a=2">
 
 </head>
 <body>
@@ -35,7 +35,7 @@
 
             <div class="session">
                 <p>¿Ya tienes una cuenta?</p>
-                <p><a href="../login.php">Inicia sesión</a></p>
+                <p><a href="login.php">Inicia sesión</a></p>
             </div>
         </form>
     </div>

@@ -20,7 +20,7 @@ if($resultado){
 }else{
     echo "<script>
     alert('Ocurrio un error');
-    location.href='formulario_usuario.php'
+    location.href='../formulario_usuario.php'
     </script>";
 }
 

@@ -642,24 +642,26 @@ h3.cart-title {
 /*------------Swiper Arrow -----------*/
 #billboard .swiper-arrow {
     position: absolute;
-    top: 0;
-    bottom: 0;
+    top: 50%;
+    transform: translateY(-50%);
     z-index: 2;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 .swiper-icon.swiper-arrow svg {
     fill: var(--light-gray-color);
+    transition: fill 0.3s ease;
 }
 .swiper-icon.swiper-arrow:hover svg,
 .swiper-icon.swiper-arrow:focus svg {
     fill: var(--primary-color);
 }
 #billboard .swiper-arrow.swiper-arrow-prev {
-    left: 0;
+    left: 10px;
 }
 #billboard .swiper-arrow.swiper-arrow-next {
-    right: 0;
+    right: 10px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -668,10 +670,11 @@ h3.cart-title {
   }
   #billboard .image-holder {
       margin-top: -390px;
-      opacity: 0.3;
+      opacity: 0.3s;
   }
   #billboard .swiper-arrow {
-      top: 400px;
+      top: 50%;
+      transform: translateY(-50%);
   }
 }
 
