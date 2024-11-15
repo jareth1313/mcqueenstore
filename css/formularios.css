@@ -87,10 +87,6 @@ body {
 
 
 /* Diseño para registro */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
-}
 
 /* Contenedor para el formulario de registro */
 .register-container {
@@ -174,3 +170,4 @@ body {
 .register-container .session a:hover {
   text-decoration: underline;
 }
+

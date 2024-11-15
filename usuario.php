@@ -53,7 +53,6 @@
                 <?php
                 }} else{
                     echo "<script>
-                    alert('Sesión no iniciada');
                     location.href='login.php'
                     </script>";
                 };

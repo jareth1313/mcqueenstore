@@ -26,7 +26,7 @@ if ($num_rows<=0){
     if($_SESSION['tipousu']==1){
         echo "<script>
         // cambiar el alert con el jquery y que se quite automaticamente luego de 4segundos
-            alert('Bienvenido! Eres un administrador.');
+            alert('Bienvenido {$datos['nom_usu']}! Eres un administrador.');
             location.href='index.php'
         </script>";    
     }else{

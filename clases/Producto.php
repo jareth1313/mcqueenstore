@@ -38,10 +38,17 @@ class Producto
         return $respuesta;
     }
 
-    function mostrarPorId($idproducto){
-        $sql="SELECT * FROM producto WHERE pk_producto='{$idproducto}'";
+    function mostrarPorId($pkproducto){
+        $sql="SELECT * FROM producto WHERE pk_producto='{$pkproducto}'";
         $respuesta = $this->conexion->query($sql);
         return $respuesta; 
+    }
+
+    function agregarCarrito($fkproducto, $fkventa, $cantidad, $subtotal){
+        $sql="INSERT INTO detalle_venta(pk_detalle_venta, fk_producto, fk_venta, cantidad, subtotal, estatus) 
+        VALUES(NULL, '{$fkproducto}', '{$fkventa}', '{$cantidad}','{$subtotal}', 0)";
+        $respuesta=$this->conexion->query($sql);
+        return $this->conexion->insert_id;
     }
 
 
