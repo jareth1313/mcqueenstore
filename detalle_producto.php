@@ -10,8 +10,6 @@
     $datos=mysqli_fetch_assoc($producto->mostrarPorId($pkproducto));
 ?>
 
-<script src="js/jquery.js">
-
 </script>
 
 <style>
@@ -30,12 +28,11 @@
         <h4><?=$datos['precio']."$"?></h4>
         <h5><?=$datos['descripcion']?></h5>
 
-        <form action="" method="POST">
-            <input type="hidden" name="fkproducto" value="<?=$datos["pk_producto"]?>">
+        <form action="formularios/agregar_carrito.php" method="POST">
+            <input type="hidden" name="pkproducto" value="<?=$datos["pk_producto"]?>">
             <input type="number" name="cantidad" value="1">
             
             <input type="submit" value="Agregar al carrito">
         </form>
-        <div id="respuesta"> </div>
     </div>
 </div>
