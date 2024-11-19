@@ -26,9 +26,12 @@ endif;
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    <!-- script
-    ================================================== -->
-    <script src="js/modernizr.js"></script>
+    
+    <!-- script ================================================== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    
   </head>
   <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" tabindex="0">
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -183,7 +186,7 @@ endif;
                       <a href="categorias.php" class="dropdown-item">Categorías</a>
                     </li>
                     <li>
-                      <a href="cart.html" class="dropdown-item">Carrito</a>
+                      <a href="carrito.php" class="dropdown-item">Carrito</a>
                     </li>
                     <li>
                       <a href="blog.html" class="dropdown-item">Blog</a>
