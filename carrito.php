@@ -1,13 +1,10 @@
 <?php
     include('nav.php');
     include('clases/Venta.php');
-
     $venta=new Venta();
 
-    //Busco la venta, puse el 1 porque es el usuario con el id=1
-    //pero debería ser el id del usuario logueado. El 0 es el estatus, ya que busco las
-    //ventas que son de carrito (estatus 0).
-    $datos=$venta->mostrarVenta($_SESSION['pk_usuario'],0);
+    if(isset($_SESSION['pk_usuario'])){
+        $datos=$venta->mostrarVenta($_SESSION['pk_usuario'],0);
 ?>
 
 <h2>Carrito de compras</h2>
@@ -21,9 +18,9 @@
 
     <?php
     $total=0;
-        foreach($datos as $fila){
-            $total+=$fila['subtotal'];
-    ?>
+    foreach($datos as $fila){
+      $total+=$fila['subtotal'];
+      ?>
 
     <tr>
         <td><?php echo $fila['nom_prod']?></td>
@@ -48,7 +45,14 @@
 
 </table>
 
-<form action="" method="POST">
-    <input type="hidden" name="compra">
+<form action="direccion_venta.php" method="POST">
+    <input type="hidden" name="venta">
     <input type="submit" value="Comprar">
 </form>
+
+<?php
+    }
+else
+echo "<script> alert('Inicie sesión');
+location.href='login.php' </script>";
+?>

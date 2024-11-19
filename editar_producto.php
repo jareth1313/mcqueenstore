@@ -16,6 +16,10 @@
   $res=$producto->buscar($fk);
   $datos=mysqli_fetch_assoc($res);
 
+  include('clases/Categorias.php');
+  $categorias=new Categorias();
+  $respuesta=$categorias->mostrarCategorias();
+
 ?>
   <form class="" action="formularios/actualizar_producto.php" method="POST" enctype="multipart/form-data">
  
@@ -34,8 +38,11 @@
         <label>Categoría:</label> <br>
         <select name="pk_categoria" required> 
             <option value="">Seleccione una categoría</option>
-            <?php
-              echo "<option value='".$datos['pk_categoria']."'>".$datos['nom_categoria']."</option>";
+            <?php while($fila=mysqli_fetch_array($respuesta)){
+                if($fila['estatus']==1){
+                    echo "<option value='".$fila['pk_categoria']."'>".$fila['nom_categoria']."</option>";
+                }
+              }
             ?>
         </select> <br>
 

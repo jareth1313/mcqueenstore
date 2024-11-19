@@ -189,7 +189,7 @@ endif;
                       <a href="carrito.php" class="dropdown-item">Carrito</a>
                     </li>
                     <li>
-                      <a href="blog.html" class="dropdown-item">Blog</a>
+                      <a href="blog.html" class="dropdown-item"></a>
                     </li>
                     <li>
                       <a href="contact.html" class="dropdown-item">Contáctanos</a>
