@@ -24,7 +24,5 @@ class Usuario{
         return $respuesta;
     }
 }
-
-# Necesita modificar los nombres de los campos de la base de datos
 ?>
 
