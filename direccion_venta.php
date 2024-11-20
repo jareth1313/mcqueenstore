@@ -12,14 +12,17 @@ $fila=mysqli_fetch_assoc($direccion->mostrarDireccion($fk_usuario));
 
 <h2>Dirección</h2>
 
-<a href="agregar_direccion.php">Agregar Dirección</a>
+<a href="agregar_direccion.php">Agregar Dirección</a> <br><br>
 
-<select name="pk_direccion" required> 
-    <option value="">Seleccione una direccion</option>
-    <?php
-        echo "<option value='".$fila['pk_direccion_usu']."'>"."Calle:".$fila['calle']." Colonia:".$fila['colonia']."</option>";
-    
-?>    
-</select> 
+<form action="metodoPago.php" method="POST">
+    <select name="pk_direccion" required> 
+        <option value="">Seleccione una direccion</option>
+        <?php
+        echo "<option value='".$fila['pk_direccion_usu']."'>"."Calle:".$fila['calle']." Colonia:".$fila['colonia']."</option>";  
+        ?>    
+    </select> 
+
+    <input type="submit" value="Continuar Compra">
+</form>
 
 
