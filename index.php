@@ -15,6 +15,7 @@ include('nav.php');
                 </div>
                 <div class="col-md-5">
                   <div class="image-holder">
+<!-- imagen del banner -->
                     <img src="images/banner-image.png" alt="banner">
                   </div>
                 </div>

@@ -180,10 +180,22 @@ endif;
                   <a class="nav-link me-4 dropdown-toggle link-dark" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Páginas</a>
                   <ul class="dropdown-menu">
                     <li>
-                      <a href="shop.html" class="dropdown-item">Comprar</a>
+                      <?php
+                        if(isset($_SESSION['tipousu'])){
+                          if( $_SESSION['tipousu']==1){
+                          echo '<a href="categorias.php" class="dropdown-item">Categorías</a>';
+                          }
+                        }
+                      ?>
                     </li>
                     <li>
-                      <a href="categorias.php" class="dropdown-item">Categorías</a>
+                      <?php
+                        if(isset($_SESSION['tipousu'])){
+                          if( $_SESSION['tipousu']==1){
+                            echo '<a href="categorias.php" class="dropdown-item">Categorías</a>';
+                          }
+                        }
+                      ?>
                     </li>
                     <li>
                       <a href="carrito.php" class="dropdown-item">Carrito</a>

@@ -3,6 +3,8 @@
     include('clases/Venta.php');
     $venta=new Venta();
 
+    $_SESSION['total'] = 0;
+
     if(isset($_SESSION['pk_usuario'])){
         $datos=$venta->mostrarVenta($_SESSION['pk_usuario'],0);
 ?>
@@ -36,6 +38,8 @@
     </tr>
     <?php
         }
+
+        $_SESSION['total'] = $total;
     ?>
     <tr>
          <!--colspan define el número de columnas combinadas -->
@@ -45,10 +49,17 @@
 
 </table>
 
+<?php
+if($total!=0){
+?>
 <form action="direccion_venta.php" method="POST">
     <input type="hidden" name="venta">
     <input type="submit" value="Comprar">
-</form>
+</form
+<?php
+}
+?>
+
 
 <?php
     }
