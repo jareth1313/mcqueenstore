@@ -4,7 +4,7 @@ include('clases/Met_pago.php');
 
 $metodoPago=new Met_pago();
 
-// $fk_direccion=$_POST['pk_direccion'];
+$_SESSION['fk_direccion']=$_POST['pk_direccion'];
 
 $dato=$metodoPago->mostrarTodo();
 
@@ -23,7 +23,7 @@ $dato=$metodoPago->mostrarTodo();
         ?>    
     </select> 
 
-    <input type="submit" value="Continuar Compra">
+    <input type="submit" value="Finalizar Compra">
 </form>
 
 
