@@ -6,7 +6,7 @@
     $_SESSION['total'] = 0;
 
     if(isset($_SESSION['pk_usuario'])){
-        $datos=$venta->mostrarVenta($_SESSION['pk_usuario'],0);
+        $datos=$venta->mostrarVenta($_SESSION['pk_usuario']);
 ?>
 
 <h2>Carrito de compras</h2>

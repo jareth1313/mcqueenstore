@@ -27,10 +27,16 @@ class Venta {
         return $respuesta;
     }
 
-    function mostrarVenta($pkusuario, $estatus){
+    function mostrarVenta($pkusuario){
         $sql="SELECT * FROM venta v INNER JOIN detalle_venta d ON v.pk_venta=d.fk_venta INNER JOIN producto p ON
         p.pk_producto=d.fk_producto WHERE v.fk_usuario='{$pkusuario}'
-        AND v.estatus='{$estatus}'";
+        AND v.estatus=0";
+        $respuesta=$this->conexion->query($sql);
+        return $respuesta;
+    }
+
+    function realizarCompra($pkventa, $fkpago, $fkdireccion, $total){
+        $sql="UPDATE venta SET fk_met_pago='{$fkpago}', fk_direccion_usu='{$fkdireccion}', total='{$total}', estatus=1 WHERE pk_venta='{$pkventa}' ";
         $respuesta=$this->conexion->query($sql);
         return $respuesta;
     }

@@ -6,8 +6,13 @@ $direccion=new Direccion();
 $pkventa=$_POST['venta'];
 $fk_usuario=$_SESSION['pk_usuario'];
 
-$fila=mysqli_fetch_assoc($direccion->mostrarDireccion($fk_usuario));
+$dato=$direccion->mostrarDireccion($fk_usuario);
 
+if(mysqli_num_rows($dato)!=0):
+    $consulta="Seleccione una direccion";
+else:
+    $consulta="Sin dirección registrada";
+endif;
 ?>
 
 <h2>Dirección</h2>
@@ -16,9 +21,10 @@ $fila=mysqli_fetch_assoc($direccion->mostrarDireccion($fk_usuario));
 
 <form action="metodoPago.php" method="POST">
     <select name="pk_direccion" required> 
-        <option value="">Seleccione una direccion</option>
-        <?php
+        <option value=""><?=$consulta?></option>
+        <?php while ($fila=mysqli_fetch_assoc($dato)){
         echo "<option value='".$fila['pk_direccion_usu']."'>"."Calle:".$fila['calle']." Colonia:".$fila['colonia']."</option>";  
+        }
         ?>    
     </select> 
 

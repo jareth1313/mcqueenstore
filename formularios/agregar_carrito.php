@@ -16,10 +16,10 @@ $carritoActivo=$venta->verCarrito($_SESSION['pk_usuario']);
 if(mysqli_num_rows($carritoActivo)>0){
     //Si el usuario tiene un carro activo, busco el producto en el carro
     $carrito=mysqli_fetch_assoc($carritoActivo);
-    $fkventa=$carrito['pk_venta'];
+    $_SESSION['fkventa']=$carrito['pk_venta'];
     echo "Ya hay carrito ".$fkventa;
 }else{
-    $fkventa=$venta->insertar(null, 0, $_SESSION['pk_usuario'], 0);
+    $_SESSION['fkventa']=$venta->insertar(null, 0, $_SESSION['pk_usuario'], 0);
 }
 //Obtengo los datos del producto.
 $datosProducto=mysqli_fetch_assoc($producto->mostrarPorId($fkproducto));
@@ -29,7 +29,7 @@ $precio=$datosProducto['precio'];
 
 $subtotal=$precio*$cantidad;
 
-$respuesta=$producto->agregarCarrito($fkproducto, $fkventa, $cantidad, $subtotal);
+$respuesta=$producto->agregarCarrito($fkproducto, $_SESSION['fkventa'], $cantidad, $subtotal);
 
 if($respuesta){
     echo "<script>
