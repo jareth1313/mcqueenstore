@@ -163,13 +163,13 @@ include('nav.php');
                     <span class="item-price text-primary"><?=$row["precio"]."$"?></span>
                   </div>
                 </div>
-                <div class="btn">
+                <div class="btn-producto-container">
                   <?php
                     if(isset($_SESSION['tipousu'])){
                       if( $_SESSION['tipousu']==1){
                       echo '<a href="editar_producto.php?pk='.$row['pk_producto'].'" class="btn btn-medium btn-black">Actualizar producto</a>';
                       
-                      echo '<a href="eliminar_producto.php?pk='.$row['pk_producto'].'" class="btn btn-medium btn-black">Eliminar producto</a>';
+                      echo '<a href="eliminar_producto.php?pk='.$row['pk_producto'].'" class="btn btn-medium btn-black">Eliminar producto   </a>';
                       }
                     }
                   ?>

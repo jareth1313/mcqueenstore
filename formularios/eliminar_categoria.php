@@ -2,9 +2,9 @@
 include('../clases/Categorias.php');
 $categoria=new Categorias();
 
-$fk=$_GET['pk'];
+$fk_cat=$_GET['pk_categori'];
 
-$resultado=$categoria->eliminarcategoria($fk);
+$resultado=$categoria->eliminarcategoria($fk_cat);
 
 if($resultado){
 	echo "<script> alert('Categoria eliminada con exito');
