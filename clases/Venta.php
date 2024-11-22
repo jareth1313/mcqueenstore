@@ -46,5 +46,14 @@ class Venta {
         $respuesta=$this->conexion->query($sql);
         return $respuesta;
     }
+
+    function historial($pkusuario){
+        $sql="SELECT * FROM venta v INNER JOIN usuario u ON v.fk_usuario=u.pk_usuario 
+        INNER JOIN detalle_venta dv ON dv.fk_venta=v.pk_venta INNER JOIN producto p ON 
+        p.pk_producto=dv.fk_producto INNER JOIN direccion_usu du ON du.pk_direccion_usu=v.fk_direccion_usu 
+        INNER JOIN met_pago mp ON v.fk_met_pago=mp.pk_met_pago WHERE v.fk_usuario='{$pkusuario}' AND v.estatus=1";
+        $respuesta=$this->conexion->query($sql);
+        return $respuesta;    
+    }
 }
 ?>

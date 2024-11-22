@@ -1,5 +1,8 @@
 <?php
 session_start();
+
+if(isset($_SESSION['pk_usuario'])){
+
 include('../clases/Producto.php');
 $producto=New Producto();
 //incluyo la clase venta
@@ -31,15 +34,20 @@ $subtotal=$precio*$cantidad;
 
 $respuesta=$producto->agregarCarrito($fkproducto, $_SESSION['fkventa'], $cantidad, $subtotal);
 
-if($respuesta){
-    echo "<script>
-    alert('Producto agregado al carrito con exito');
-    location.href='../index.php'
-    </script>";
+    if($respuesta){
+        echo "<script>
+        alert('Producto agregado al carrito con exito');
+        location.href='../index.php'
+        </script>";
+    }else{
+        echo "Error al agregar el producto al carrito";
+    }
 }else{
-    echo "Error al agregar el producto al carrito";
+    echo "<script>
+    alert('Debe iniciar sesión');
+    location.href='../login.php'
+    </script>";
 }
-
 
 
 ?>

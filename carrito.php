@@ -12,11 +12,15 @@
 <h2>Carrito de compras</h2>
 <link rel="stylesheet" href="estilos.css">
 <table>
-    <tr>
-        <th>Producto</th>
-        <th>Cantidad</th>
-        <th>Importe</th>
-    </tr>
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Importe</th>
+                    <th></th>
+                    
+                </tr>
+            </thead>
 
     <?php
     $total=0;
