@@ -6,7 +6,7 @@
 
     $datos=$cat->mostrarCategorias();
 ?>
-
+<br>
 <a href="form_categorias.php">Agregar Categorías</a>
 <link rel="stylesheet" href="estilos.css">
 <h2>Categorias:</h2>

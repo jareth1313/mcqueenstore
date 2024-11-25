@@ -11,8 +11,6 @@ class Direccion{
         return $this->conexion->insert_id;
     }
 
-
-
     function mostrarDireccion($fkusuario){
         $sql="SELECT * FROM direccion_usu WHERE fk_usuario='{$fkusuario}' AND estatus=1";
         $respuesta=$this->conexion->query($sql);

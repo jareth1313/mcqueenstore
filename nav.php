@@ -168,7 +168,13 @@ endif;
                   <a class="nav-link me-4 active" href="index.php">Inicio</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link me-4" href="#company-services">Servicios</a>
+                  <?php
+                    if(isset($_SESSION['tipousu'])){
+                      if( $_SESSION['tipousu']==1){
+                        echo '<a href="formulario_usuario.php" class="nav-link me-4">Agregar Administrador</a>';
+                      }
+                    }
+                  ?>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link me-4" href="#mobile-products">Productos</a>
@@ -183,7 +189,7 @@ endif;
                       <?php
                         if(isset($_SESSION['tipousu'])){
                           if( $_SESSION['tipousu']==1){
-                          echo '<a href="categorias.php" class="dropdown-item">Categorías</a>';
+                          echo '<a href="historial_venta.php" class="dropdown-item">Historial de Ventas</a>';
                           }
                         }
                       ?>
