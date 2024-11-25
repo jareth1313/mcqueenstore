@@ -8,21 +8,36 @@ $ap_usu=$_POST["apellido_paterno"];
 $am_usu=$_POST["apellido_materno"];
 $correo=$_POST["correo"];
 $passwrd=$_POST["pass"];
+$estatus=$_POST['estatus'];
 
-// envía los datos y el nombre del archivo
-$resultado=$usuario->insertar($nom_usu, $ap_usu, $am_usu, $correo, $passwrd, 0);
+if($estatus==1){
+    $resultado=$usuario->insertarAdmin($nom_usu, $ap_usu, $am_usu, $correo, $passwrd, $estatus);
 
-if($resultado){
+    if($resultado){
     echo "<script>
-    alert('Usuario creado con exito');
-    location.href='../login.php'
+    alert('Usuario Administrador creado con exito');
+    location.href='../index.php'
     </script>";
+    }else{
+        echo "<script>
+        alert('Ocurrio un error');
+        location.href='../formulario_usuario.php'
+        </script>";
+    }
 }else{
-    echo "<script>
-    alert('Ocurrio un error');
-    location.href='../formulario_usuario.php'
-    </script>";
-}
+    $resultado=$usuario->insertar($nom_usu, $ap_usu, $am_usu, $correo, $passwrd, 0);
 
+    if($resultado){
+        echo "<script>
+        alert('Usuario creado con exito');
+        location.href='../login.php'
+        </script>";
+    }else{
+        echo "<script>
+        alert('Ocurrio un error');
+        location.href='../formulario_usuario.php'
+        </script>";
+    }
+}
 
 ?>

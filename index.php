@@ -117,13 +117,7 @@ include('nav.php');
           <div class="display-header d-flex justify-content-between pb-3">
             <h2 class="display-7 text-dark text-uppercase">Nuestros Productos</h2>
             <div class="btn-right">
-                <?php
-                  if(isset($_SESSION['tipousu'])){
-                  if( $_SESSION['tipousu']==1){
-                      echo '<a href="producto.php" class="btn btn-medium btn-normal text-uppercase">Agregar producto</a>';
-                    }
-                  }
-                ?>
+                
             </div>
             <!-- <div class="btn-right">
               <a href="shop.html" class="btn btn-medium btn-normal text-uppercase">Comprar</a>
@@ -163,13 +157,13 @@ include('nav.php');
                     <span class="item-price text-primary"><?=$row["precio"]."$"?></span>
                   </div>
                 </div>
-                <div class="btn">
+                <div class="btn-producto-container">
                   <?php
                     if(isset($_SESSION['tipousu'])){
                       if( $_SESSION['tipousu']==1){
                       echo '<a href="editar_producto.php?pk='.$row['pk_producto'].'" class="btn btn-medium btn-black">Actualizar producto</a>';
                       
-                      echo '<a href="eliminar_producto.php?pk='.$row['pk_producto'].'" class="btn btn-medium btn-black">Eliminar producto</a>';
+                      echo '<a href="formularios/eliminar_producto.php?pk='.$row['pk_producto'].'" class="btn btn-medium btn-black">Eliminar producto   </a>';
                       }
                     }
                   ?>

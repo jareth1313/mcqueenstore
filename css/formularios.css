@@ -171,3 +171,28 @@ body {
   text-decoration: underline;
 }
 
+.btn-producto-container {
+  display: flex;
+  flex-direction: column; /* Coloca los botones en columna (uno sobre otro) */
+  align-items: center; /* Centra los botones horizontalmente */
+  gap: 5px; /* Espacio entre los botones */
+  margin-top: 10px;
+}
+
+.btn-producto {
+  background-color: #000; /* Color de fondo negro */
+  color: #fff; /* Texto blanco */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer;
+  font-size: 14px;
+  text-align: center;
+  width: 100%; /* Asegura que ambos botones tengan el mismo ancho */
+  max-width: 200px; /* Establece un ancho máximo */
+  transition: background-color 0.3s ease;
+}
+
+.btn-producto:hover {
+  background-color: #333; /* Cambia el color al pasar el mouse */
+}

@@ -8,6 +8,10 @@
 
     //mando el id a una función para que me arroje los datos de ese producto en específico.
     $datos=mysqli_fetch_assoc($producto->mostrarPorId($pkproducto));
+ 
+
+
+
 ?>
 
 </script>

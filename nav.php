@@ -28,7 +28,7 @@ endif;
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     
     <!-- script ================================================== -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
 
 
     
@@ -168,7 +168,13 @@ endif;
                   <a class="nav-link me-4 active" href="index.php">Inicio</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link me-4" href="#company-services">Servicios</a>
+                  <?php
+                    if(isset($_SESSION['tipousu'])){
+                      if( $_SESSION['tipousu']==1){
+                        echo '<a href="formulario_usuario.php" class="nav-link me-4">Agregar Administrador</a>';
+                      }
+                    }
+                  ?>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link me-4" href="#mobile-products">Productos</a>
@@ -183,7 +189,7 @@ endif;
                       <?php
                         if(isset($_SESSION['tipousu'])){
                           if( $_SESSION['tipousu']==1){
-                          echo '<a href="categorias.php" class="dropdown-item">Categorías</a>';
+                          echo '<a href="historial_venta.php" class="dropdown-item">Historial de Ventas</a>';
                           }
                         }
                       ?>

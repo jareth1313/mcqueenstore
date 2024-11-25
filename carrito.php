@@ -6,17 +6,21 @@
     $_SESSION['total'] = 0;
 
     if(isset($_SESSION['pk_usuario'])){
-        $datos=$venta->mostrarVenta($_SESSION['pk_usuario']);
+    $datos=$venta->mostrarVenta($_SESSION['pk_usuario']);
 ?>
 
 <h2>Carrito de compras</h2>
 <link rel="stylesheet" href="estilos.css">
 <table>
-    <tr>
-        <th>Producto</th>
-        <th>Cantidad</th>
-        <th>Importe</th>
-    </tr>
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Importe</th>
+                    <th></th>
+                    
+                </tr>
+            </thead>
 
     <?php
     $total=0;
@@ -49,16 +53,16 @@
 
 </table>
 
-<?php
-if($total!=0){
-?>
-<form action="direccion_venta.php" method="POST">
-    <input type="hidden" name="venta">
-    <input type="submit" value="Comprar">
-</form
-<?php
-}
-?>
+    <?php
+    if($total!=0){
+    ?>
+    <form action="direccion_venta.php" method="POST">
+        <input type="hidden" name="venta">
+        <input type="submit" value="Comprar">
+    </form
+    <?php
+    }
+    ?>
 
 
 <?php
