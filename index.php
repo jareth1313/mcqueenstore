@@ -115,7 +115,7 @@ include('nav.php');
       <div class="container">
         <div class="row">
           <div class="display-header d-flex justify-content-between pb-3">
-            <h2 class="display-7 text-dark text-uppercase">Celulares y Smartphones</h2>
+            <h2 class="display-7 text-dark text-uppercase">Nuestros Productos</h2>
             <div class="btn-right">
                 <?php
                   if(isset($_SESSION['tipousu'])){
@@ -189,7 +189,7 @@ include('nav.php');
       <div class="container">
         <div class="row">
           <div class="display-header d-flex justify-content-between pb-3">
-            <h2 class="display-7 text-dark text-uppercase">Relojes Inteligentes</h2>
+            <h2 class="display-7 text-dark text-uppercase">Procesadores</h2>
             <div class="btn-right">
               <a href="shop.html" class="btn btn-medium btn-normal text-uppercase">Comprar</a>
             </div>
