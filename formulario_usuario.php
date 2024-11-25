@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro McQueen</title>
-    <link rel="stylesheet" href="css/formularios.css?a=2">
+    <link rel="stylesheet" href="">
 
 </head>
 <body>
@@ -15,6 +15,7 @@
     <div class="register-container">
         <form action="formularios/insertar_usuario.php" method="POST">
             <h2>Registro</h2>
+            <br><br><br><br>
 
             <label for="username">Nombre de usuario:</label>
             <input type="text" id="username" name="username" required>
@@ -31,6 +32,15 @@
             <label for="pass">Contraseña:</label>
             <input type="password" id="pass" name="pass" required>
 
+            <?php
+                if(isset($_SESSION['tipousu'])){
+                    if( $_SESSION['tipousu']==1){
+                    echo '
+                        <label for="pass">Estatus:</label>
+                        <input type="text" id="pass" name="estatus" required>';
+                    }
+                }
+            ?>
             <input type="submit" value="Guardar">
 
             <div class="session">

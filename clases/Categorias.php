@@ -20,8 +20,9 @@ class Categorias
         return $respuesta;
     }
 
+    
     function eliminarcategoria($pk_categoria){
-        $sql="DELETE FROM categoria WHERE pk_categoria= '{$pk_categoria}' ";
+        $sql="UPDATE categoria SET estatus=0 WHERE pk_categoria= '{$pk_categoria}' ";
         $respuesta=$this->conexion->query($sql);
         return $respuesta;
     }

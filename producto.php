@@ -14,8 +14,6 @@
     $categorias=$cat->mostrarCategorias();
 ?>
 
-
-<!-- hola -->
 <body>
     <form class="" action="formularios/agregar_producto.php" method="POST" enctype="multipart/form-data">
         <h2>Registrar Producto</h2>

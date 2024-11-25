@@ -1,36 +1,233 @@
 <?php
-    include('nav.php');
+include('nav.php');
 ?>
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro McQueen</title>
-    <link rel="stylesheet" href="css/formularios.css?a=2">
+<!--
+ @license
+ Copyright 2019 Google LLC. All Rights Reserved.
+ SPDX-License-Identifier: Apache-2.0
+-->
+<html>
+  <head>
+    <title>Geocoding Service</title>
+    <script>
+      /**
+       * @license
+       * Copyright 2019 Google LLC. All Rights Reserved.
+       * SPDX-License-Identifier: Apache-2.0
+       */
+      let map;
+      let marker;
+      let geocoder;
+      let responseDiv;
+      let response;
 
-</head>
-<body>
+      function initMap() {
+        map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 8,
+          center: { lat: -34.397, lng: 150.644 },
+          mapTypeControl: false,
+        });
+        geocoder = new google.maps.Geocoder();
 
-    <div class="register-container">
-        <form action="formularios/insertar_usuario.php" method="POST">
-            <h2>Registro</h2>
+        const inputText = document.createElement("input");
 
-            <label for="username">Calle:</label>
-            <input type="text" id="username" name="calle" required>
+        inputText.type = "text";
+        inputText.placeholder = "Enter a location";
 
-            <label for="apellido_paterno">Colonia:</label>
-            <input type="text" id="apellido_paterno" name="colonia" required>
+        const submitButton = document.createElement("input");
+ 
+        submitButton.type = "button";
+        submitButton.value = "Buscar";
+        submitButton.classList.add("button", "button-primary");
 
-            <label for="apellido_materno">Número exterior:</label>
-            <input type="text" id="apellido_materno" name="num_exterior">
+        const clearButton = document.createElement("input");
 
-            <label for="correo">Referencia:</label>
-            <input type="text" id="correo" name="referencia" required>
+        clearButton.type = "button";
+        clearButton.value = "Limpiar";
+        clearButton.classList.add("button", "button-secondary");
+        response = document.createElement("pre");
+        response.id = "response";
+        response.innerText = "";
+        responseDiv = document.createElement("div");
+        responseDiv.id = "response-container";
+        responseDiv.appendChild(response);
 
-            <input type="submit" value="Guardar">
-        </form>
-    </div>
+        const instructionsElement = document.createElement("p");
 
-</body>
+        instructionsElement.id = "instructions";
+        instructionsElement.innerHTML =
+          "<strong>Instructions</strong>: Enter an address in the textbox to geocode or click on the map to reverse geocode.";
+        map.controls[google.maps.ControlPosition.TOP_LEFT].push(inputText);
+        map.controls[google.maps.ControlPosition.TOP_LEFT].push(submitButton);
+        map.controls[google.maps.ControlPosition.TOP_LEFT].push(clearButton);
+        map.controls[google.maps.ControlPosition.LEFT_TOP].push(
+          instructionsElement
+        );
+        // map.controls[google.maps.ControlPosition.LEFT_TOP].push(responseDiv);
+        marker = new google.maps.Marker({
+          map,
+        });
+        map.addListener("click", (e) => {
+          geocode({ location: e.latLng });
+        });
+        submitButton.addEventListener("click", () =>
+          geocode({ address: inputText.value })
+        );
+        clearButton.addEventListener("click", () => {
+          clear();
+        });
+        clear();
+      }
+
+      function clear() {
+        marker.setMap(null);
+      }
+
+      function geocode(request) {
+        clear();
+        geocoder
+          .geocode(request)
+          .then((result) => {
+            const { results } = result;
+
+            map.setCenter(results[0].geometry.location);
+            marker.setPosition(results[0].geometry.location);
+            marker.setMap(map);
+            document.getElementById('calle').value=results[0].address_components[1].long_name;
+            document.getElementById('colonia').value=results[0].address_components[2].long_name;
+            document.getElementById('ciudad').value=results[1].address_components[3].long_name;
+            document.getElementById('pais').value=results[0].address_components[5].long_name;
+            //document.getElementById('localidad').value=results[0].geometry.location;
+
+
+            response.innerText = JSON.stringify(result, null, 2);
+            return results;
+          })
+          .catch((e) => {
+            alert("Geocode was not successful for the following reason: " + e);
+          });
+      }
+
+      window.initMap = initMap;
+    </script>
+    <style>
+      /**
+       * @license
+       * Copyright 2019 Google LLC. All Rights Reserved.
+       * SPDX-License-Identifier: Apache-2.0
+       */
+      /**
+       * Always set the map height explicitly to define the size of the div element
+       * that contains the map. 
+       */
+      #map {
+        height: 100%;
+      }
+
+      /* Optional: Makes the sample page fill the window. */
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      input[type="text"] {
+        background-color: #fff;
+        border: 0;
+        border-radius: 2px;
+        box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
+        margin: 10px;
+        padding: 0 0.5em;
+        font: 400 18px Roboto, Arial, sans-serif;
+        overflow: hidden;
+        line-height: 40px;
+        margin-right: 0;
+        min-width: 25%;
+      }
+
+      input[type="button"] {
+        background-color: #fff;
+        border: 0;
+        border-radius: 2px;
+        box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
+        margin: 10px;
+        padding: 0 0.5em;
+        font: 400 18px Roboto, Arial, sans-serif;
+        overflow: hidden;
+        height: 40px;
+        cursor: pointer;
+        margin-left: 5px;
+      }
+      input[type="button"]:hover {
+        background: rgb(235, 235, 235);
+      }
+      input[type="button"].button-primary {
+        background-color: #1a73e8;
+        color: white;
+      }
+      input[type="button"].button-primary:hover {
+        background-color: #1765cc;
+      }
+      input[type="button"].button-secondary {
+        background-color: white;
+        color: #1a73e8;
+      }
+      input[type="button"].button-secondary:hover {
+        background-color: #d2e3fc;
+      }
+
+      #response-container {
+        background-color: #fff;
+        border: 0;
+        border-radius: 2px;
+        box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
+        margin: 10px;
+        padding: 0 0.5em;
+        font: 400 18px Roboto, Arial, sans-serif;
+        overflow: hidden;
+        overflow: auto;
+        max-height: 50%;
+        max-width: 90%;
+        background-color: rgba(255, 255, 255, 0.95);
+        font-size: small;
+      }
+
+      #instructions {
+        background-color: #fff;
+        border: 0;
+        border-radius: 2px;
+        box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
+        margin: 10px;
+        padding: 0 0.5em;
+        font: 400 18px Roboto, Arial, sans-serif;
+        overflow: hidden;
+        padding: 1rem;
+        font-size: medium;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+
+    <form>
+      Calle
+    <input type="text" id="calle" name="calle">
+      Colonia
+      <input type="text" id="colonia" name="colonia">
+      Ciudad
+      <input type="text" id="ciudad" name="ciudad">
+      Pais
+      <input type="text" id="pais" name="pais">
+   
+    </form>
+
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcz6LSJXakdB2eaZGmM5xlqWpbCZhiQ1Y&callback=initMap&v=weekly&solution_channel=GMP_CCS_geocodingservice_v2"
+      defer
+    ></script>
+  </body>
 </html>
+    

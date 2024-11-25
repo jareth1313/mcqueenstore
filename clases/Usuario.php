@@ -10,6 +10,12 @@ class Usuario{
         $respuesta=$this->conexion->query($consulta);
         return $this->conexion->insert_id;
     }
+    
+    function insertarAdmin($nom_usu, $ap_usu, $am_usu, $correo, $passwrd,$tipo_usu){
+        $consulta="INSERT INTO usuario(pk_usuario, nom_usu, ap_usu, am_usu, correo, passwrd, tipo_usu, estatus) VALUES (NULL, '{$nom_usu}', '{$ap_usu}', '{$am_usu}', '{$correo}', '{$passwrd}', '{$tipo_usu}', 1)";
+        $respuesta=$this->conexion->query($consulta);
+        return $this->conexion->insert_id;
+    }
 
     function validar($correo,$passwrd){
         $consulta="SELECT * FROM usuario WHERE correo='{$correo}' AND passwrd='{$passwrd}' AND estatus=1";
