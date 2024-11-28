@@ -25,8 +25,8 @@ include('nav.php');
 
       function initMap() {
         map = new google.maps.Map(document.getElementById("map"), {
-          zoom: 8,
-          center: { lat: -34.397, lng: 150.644 },
+          zoom: 14,
+          center: { lat: 22.832973, lng: -105.778375 },
           mapTypeControl: false,
         });
         geocoder = new google.maps.Geocoder();
@@ -65,6 +65,7 @@ include('nav.php');
         map.controls[google.maps.ControlPosition.LEFT_TOP].push(
           instructionsElement
         );
+        //Para que salga el arreglo con los datos
         // map.controls[google.maps.ControlPosition.LEFT_TOP].push(responseDiv);
         marker = new google.maps.Marker({
           map,
@@ -98,7 +99,6 @@ include('nav.php');
             document.getElementById('calle').value=results[0].address_components[1].long_name;
             document.getElementById('colonia').value=results[0].address_components[2].long_name;
             document.getElementById('ciudad').value=results[1].address_components[3].long_name;
-            document.getElementById('pais').value=results[0].address_components[5].long_name;
             //document.getElementById('localidad').value=results[0].geometry.location;
 
 
@@ -123,7 +123,8 @@ include('nav.php');
        * that contains the map. 
        */
       #map {
-        height: 100%;
+        height: 70%;
+        width: 100%;
       }
 
       /* Optional: Makes the sample page fill the window. */
@@ -207,21 +208,21 @@ include('nav.php');
         padding: 1rem;
         font-size: medium;
       }
+
     </style>
   </head>
   <body>
     <div id="map"></div>
 
-    <form>
+    <form action="formularios/insertar_direccion.php" method="POST">
       Calle
     <input type="text" id="calle" name="calle">
       Colonia
       <input type="text" id="colonia" name="colonia">
       Ciudad
       <input type="text" id="ciudad" name="ciudad">
-      Pais
-      <input type="text" id="pais" name="pais">
-   
+    
+      <input class="btn" type="submit" value="Guardar">
     </form>
 
     <script

@@ -1,21 +1,23 @@
 <?php
     include('nav.php');
-    include('clases/Categorias.php');
+    include('clases/Usuario.php');
 
-    $cat=new Categorias();
+    $usu=new Usuario();
 
-    $datos=$cat->mostrarCategorias();
+    $datos=$usu->mostrarAdmins();
 ?>
 <br>
-<a href="form_categorias.php">Agregar Categorías</a>
 <link rel="stylesheet" href="estilos.css">
-<h2>Categorias:</h2>
+<h2>Administradores:</h2>
 <table>
     
     <thead>
         <tr>
             <!--colspan define el número de columnas combinadas -->
             <th >Nombre</th>
+            <th>Apellido Paterno</th>
+            <th>Correo</th>
+            <th>Tipo</th>
             <th>estatus</th>
             <th></th>
             <th></th>
@@ -27,11 +29,14 @@
         ?> 
 
         <tr>
-            <td><?php echo $row['nom_categoria']?></td>
+            <td><?php echo $row['nom_usu']?></td>
+            <td><?=$row['ap_usu']?></td>
+            <td><?=$row['correo']?></td>
+            <td><?=$row['tipo_usu']?></td>
             <td><?=$row['estatus']?></td>
             <td>
               
-                <?php echo '<a href="editar_categoria.php?pk='.$row['pk_categoria'].'" title="Editar Categoria">
+                <?php echo '<a href="editar_admins.php?pk_admin='.$row['pk_usuario'].'" title="Editar Administrador">
             
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
                     <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
@@ -40,7 +45,7 @@
                      
             </td>
             <td>
-            <?php echo '<a href="formularios/eliminar_categoria.php?pk_categori='.$row['pk_categoria'].'" title="Eliminar Categoria">
+            <?php echo '<a href="eliminar_admins.php?pk_admin='.$row['pk_usuario'].'" title="Eliminar">
             
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
                 <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>

@@ -20,11 +20,22 @@
     .cuadro{
         display: inline-block;
         width: 40%;
-        padding: 30px
+        padding: 40px;
+        
+    }
+
+    .cuadrofoto{
+        display: inline-block;
+        width: 40%;
+        padding: 20px;
+    }
+
+    .cuadrofoto img{
+        width: 100%;
     }
 </style>
 <div>
-    <div class="cuadro">
+    <div class="cuadrofoto">
         <img src="images/<?=$datos['foto']?>">
     </div>
     <div class="cuadro">
