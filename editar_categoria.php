@@ -10,7 +10,7 @@
 ?>
   <form class="" action="formularios/actualizar_categoria.php" method="POST">
  
-        <h2>Actualizar Producto</h2>
+        <h2>Actualizar Categoria</h2>
         <label>Nombre de la categoria:</label> <br>
         <input type="hidden" name="pk" value="<?=$datos['pk_categoria']; ?>">
 

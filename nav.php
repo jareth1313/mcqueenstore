@@ -204,10 +204,13 @@ endif;
                       ?>
                     </li>
                     <li>
+                    <a href="<?=$ruta?>" class="dropdown-item">Usuario</a>
+                    </li>
+                    <li>
                       <a href="carrito.php" class="dropdown-item">Carrito</a>
                     </li>
                     <li>
-                      <a href="blog.html" class="dropdown-item"></a>
+                      <a href="mostrar_admins.php" class="dropdown-item">Ver Administradores</a>
                     </li>
                     <li>
                       <a href="contact.html" class="dropdown-item">Contáctanos</a>

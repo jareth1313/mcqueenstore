@@ -27,13 +27,12 @@
                 while($row=mysqli_fetch_assoc($respuesta)){
                     ?>
                 <div class="x">
-                    <a class="btn" href="usuario.php">Información Personal</a>
+                    <?php
+                    echo '<a href="editar_info.php?pk_usuario='.$row['pk_usuario'].'" class="btn">Editar Información</a>'
+                    ?>
                     <a class="btn" href="direccion.php">Dirección</a>
                     <a class="btn" href="historial.php">Historial de Compras</a>
                 </div>
-
-                <div class="xx" id="editarInfo">
-                    <a class="btn" href="editar_info.php">Editar Información</a>
 
                     <label>Nombre:</label> <br>
                     <input value="<?=$row['nom_usu']?>" readonly class="controls" type="text" name="nombres" required> <br>

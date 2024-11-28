@@ -56,6 +56,7 @@ class Venta {
         return $respuesta;    
     }
 
+    //Manejar por pedidos 
     function historial_venta(){
         $sql= "SELECT * FROM venta v INNER JOIN detalle_venta dv ON v.pk_venta=dv.fk_venta 
         INNER JOIN producto p ON dv.fk_producto=p.pk_producto WHERE v.estatus=1";
