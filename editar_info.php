@@ -20,23 +20,25 @@ $respuesta=$usuario->buscar($pkusu);
                     <h1>Editar Información</h1>
                     <input value="<?=$row['pk_usuario']?>"  class="controls" type="hidden" name="pk_usu">
 
-                    <label>Nombre:</label> <br>
+                    <label>Nombre:</label>
                     <input value="<?=$row['nom_usu']?>"  class="controls" type="text" name="nombre_editar" required> <br>
 
-                    <label>Apellido Paterno:</label> <br>
+                    <label>Apellido Paterno:</label> 
                     <input value="<?=$row['ap_usu']?>" class="controls" type="text" name="apaterno_editar" required> <br>
 
-                    <label>Apellido Materno:</label> <br>
+                    <label>Apellido Materno:</label> 
                     <input value="<?=$row['am_usu']?>" class="controls" type="text" name="amaterno_editar"> <br> 
 
-                    <label>Email:</label> <br>
+                    <label>Email:</label> 
                     <input value="<?=$row['correo']?>" class="controls" type="email" name="correo_editar" required> <br> 
 
-                    <label>Contraseña:</label> <br>
+                    <label>Contraseña:</label>
                     <input value="<?=$row['passwrd']?>" class="controls" type="text" name="contra_editar" required>
 
-
-                    <input class="btn" type="submit" value="Guardar">
+                    <div class="conte-link">
+                    <input class="btnn" type="submit" value="Guardar">
+                    </div>
+                    
                 </form> 
 
                 
