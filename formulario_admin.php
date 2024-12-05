@@ -7,34 +7,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro McQueen</title>
+    <link rel="stylesheet" href="">
+
 </head>
 <body>
 
     <div class="register-container">
-        <form action="formularios/insertar_usuario.php" method="POST">
-            <h2>Registro De Usuario</h2>
+        <form action="formularios/insertar_admin.php" method="POST">
+            <h2>Registro De Administrador</h2>
             
-
             <label for="username">Nombre de usuario:</label>
-            <input type="text" id="username" name="username" required>
+            <input type="text" name="username_admin" required>
 
             <label for="apellido_paterno">Apellido paterno:</label>
-            <input type="text" id="apellido_paterno" name="apellido_paterno" required>
+            <input type="text" name="apellido_paterno_admin" required>
 
             <label for="apellido_materno">Apellido materno:</label>
-            <input type="text" id="apellido_materno" name="apellido_materno">
+            <input type="text" name="apellido_materno_admin">
 
             <label for="correo">Correo (E-mail):</label>
-            <input type="email" id="correo" name="correo" required>
+            <input type="email" name="correo_admin" required>
 
             <label for="pass">Contraseña:</label>
-            <input type="password" id="pass" name="pass" required>
+            <input type="password" name="pass_admin" required>
+
             <input type="submit" value="Guardar">
 
-            <div class="session">
-                <p>¿Ya tienes una cuenta?</p>
-                <p><a href="login.php">Inicia sesión</a></p>
-            </div>
         </form>
     </div>
 

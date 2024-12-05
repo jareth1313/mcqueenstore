@@ -8,7 +8,7 @@ $ap_usu=$_POST["apellido_paterno"];
 $am_usu=$_POST["apellido_materno"];
 $correo=$_POST["correo"];
 $passwrd=$_POST["pass"];
-$estatus=$_POST['estatus'];
+$estatus=$_POST["estatus"];
 
 if($estatus==1){
     $resultado=$usuario->insertarAdmin($nom_usu, $ap_usu, $am_usu, $correo, $passwrd, $estatus);

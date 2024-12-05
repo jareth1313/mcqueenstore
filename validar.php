@@ -32,12 +32,12 @@ if ($num_rows<=0){
     if($_SESSION['tipousu']==1){
         echo "<script>
         // cambiar el alert con el jquery y que se quite automaticamente luego de 4segundos
-            alert('Bienvenido {$datos['nom_usu']}! Eres un administrador.');
+            alert('Bienvenido {$_SESSION['username']}! Eres un administrador.');
             location.href='index.php'
         </script>";    
     }else{
         echo "<script>
-            alert('Bienvenido {$datos['nom_usu']}.');
+            alert('Bienvenido {$_SESSION['username']}.');
             location.href='index.php'
         </script>";
     }

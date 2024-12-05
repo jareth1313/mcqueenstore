@@ -15,6 +15,7 @@ $datos=$venta->historial_venta();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabla Estilizada</title>
     <link rel="stylesheet" href="estilos.css">
+    <script src="estatus.js"></script>
 </head>
 <body>
     <br>
@@ -25,7 +26,8 @@ $datos=$venta->historial_venta();
                 <tr>
                     <th>Productos</th>
                     <th>Cantidad</th>
-                    <th>Descripción</th> 
+                    <th>Descripción</th>
+                    <th colspan="2">Estatus</th> 
                 </tr>
             </thead>
             <tbody>
@@ -33,12 +35,21 @@ $datos=$venta->historial_venta();
                 while($fila=mysqli_fetch_array($datos)){
                 $productos=$venta->detalle_venta($fila['pk_venta']);
 
+            
+
+                
             ?>
             <tr style="background-color: gray">
-                <td>Pedido</td>
-                <td><?=$fila['fecha_venta']; ?></td>
-                <td><?=$fila['hora_venta']; ?></td>
+                <td><?="Pedido: ".$fila['pk_venta']; ?></td>
+                <td><?="Fecha: ".$fila['fecha_venta']; ?></td>
+                <td><?="Hora: ".$fila['hora_venta']; ?></td>
+                <td class="status">
+                <?=$fila['estatus'];?> 
+               <?= '<a class="btn" style=" border: 1px black solid;
+                color: black; background-color: white;" href="actualizar_estatus.php?pk_venta='.$fila['pk_venta'].'">Entregado</a>' ?>
+        </td>
             </tr>
+        
             <?php
                  while($fila2=mysqli_fetch_array($productos)){
             ?>

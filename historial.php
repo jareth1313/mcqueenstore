@@ -27,12 +27,14 @@ $datos=$venta->historial($_SESSION['pk_usuario']);
                     <th>Fecha</th>
                     <th>Hora</th>
                     <th>Dirección</th>
-                    <th>Método de Pago</th>  
+                    <th>Método de Pago</th> 
+                    <th>Estatus</th>  
                 </tr>
             </thead>
             <tbody>
             <?php
                 while($fila=mysqli_fetch_assoc($datos)){
+                
             ?>
                 <tr>
                     <td><?=$fila['nom_prod']?></td>
@@ -42,6 +44,7 @@ $datos=$venta->historial($_SESSION['pk_usuario']);
                     <td><?=$fila['hora_venta']?></td>
                     <td><?="Calle: ".$fila['calle']." Colonia: ".$fila['colonia']?></td>
                     <td><?=$fila['nom_met_pago']?></td>
+                    <td><?=$fila['estatus']?></td>
                 </tr>
             </tbody>
             <?php
