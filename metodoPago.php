@@ -12,7 +12,7 @@ $dato=$metodoPago->mostrarTodo();
 
 <h2>Método de Pago</h2>
 
-<a href="agregar_metodopago.php">Agregar Método de Pago</a> <br><br>
+<!-- <a href="agregar_metodopago.php">Agregar Método de Pago</a> <br><br> -->
 
 <form action="formularios/realizar_compra.php" method="POST">
     <select name="pk_metpago" required> 

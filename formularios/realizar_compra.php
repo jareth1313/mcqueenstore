@@ -13,7 +13,7 @@ $resultado=$venta->realizarCompra($_SESSION['fkventa'], $folio, $pkpago, $_SESSI
 
 if($resultado){
     echo "<script>
-    alert('Venta realizada con exito');
+    alert('Compra realizada con exito');
     location.href='../index.php'
     </script>";
 }else{

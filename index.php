@@ -546,7 +546,7 @@ include('nav.php');
             <div class="row d-flex flex-wrap justify-content-between">
               <div class="col-lg-3 col-sm-6 pb-3">
                 <div class="footer-menu">
-                  <img src="images/main-logo.png" alt="logo">
+                  <!-- <img src="images/main-logo.png" alt="logo"> -->
                   <p>Explora nuestra tienda y descubre tecnología diseñada para transformar tu día a día. Innovación, calidad y estilo a un clic de distancia.</p>
                   <div class="social-links">
                     <ul class="d-flex list-unstyled">
@@ -589,38 +589,38 @@ include('nav.php');
                   </div>
                 </div>
               </div>
-              <div class="col-lg-2 col-sm-6 pb-3">
+              <!-- <div class="col-lg-2 col-sm-6 pb-3">
                 <div class="footer-menu text-uppercase">
                   <h5 class="widget-title pb-2">Enlaces rápidos</h5>
                   <ul class="menu-list list-unstyled text-uppercase">
                     <li class="menu-item pb-2">
                       <a href="index.php">Home</a>
                     </li>
-                    <!-- <li class="menu-item pb-2">
+                     <li class="menu-item pb-2">
                       <a href="#">Sobre nosotros</a>
                     </li> -->
-                    <li class="menu-item pb-2">
+                    <!-- <li class="menu-item pb-2">
                       <a href="#">Comprar</a>
                     </li>
-                    <!-- <li class="menu-item pb-2">
+                     <li class="menu-item pb-2">
                       <a href="#">Blogs</a>
-                    </li> -->
+                    </li> 
                     <li class="menu-item pb-2">
                       <a href="#">Contáctanos</a>
                     </li>
                   </ul>
                 </div>
-              </div>
-              <div class="col-lg-3 col-sm-6 pb-3">
+              </div> -->
+              <!-- <div class="col-lg-3 col-sm-6 pb-3">
                 <div class="footer-menu text-uppercase">
                   <h5 class="widget-title pb-2">Ayúda e información adicional</h5>
                   <ul class="menu-list list-unstyled">
-                    <!-- <li class="menu-item pb-2">
+                     <li class="menu-item pb-2">
                       <a href="#">Rastrea tus pedidos</a>
                     </li> -->
                     <!-- <li class="menu-item pb-2">
                       <a href="#">Políticas de reembolso</a>
-                    </li> -->
+                    </li>
                     <li class="menu-item pb-2">
                       <a href="#">Envío y Entrega</a>
                     </li>
@@ -632,7 +632,7 @@ include('nav.php');
                     </li>
                   </ul>
                 </div>
-              </div>
+              </div> -->
               <div class="col-lg-3 col-sm-6 pb-3">
                 <div class="footer-menu contact-item">
                   <h5 class="widget-title text-uppercase pb-2">Contáctanos</h5>

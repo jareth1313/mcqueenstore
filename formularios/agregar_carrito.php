@@ -16,14 +16,14 @@ $cantidad=$_POST['cantidad'];
 //Busco si el usuario tiene un carro activo. 
 $carritoActivo=$venta->verCarrito($_SESSION['pk_usuario']);
 //Dejé un usuario estático,pero debería ser el usuario logueado usando por ejemplo $_SESSION['idusuario'];
-if(mysqli_num_rows($carritoActivo)>0){
-    //Si el usuario tiene un carro activo, busco el producto en el carro
-    $carrito=mysqli_fetch_assoc($carritoActivo);
-    $_SESSION['fkventa']=$carrito['pk_venta'];
-    echo "Ya hay carrito ".$fkventa;
-}else{
-    $_SESSION['fkventa']=$venta->insertar(null, 0, $_SESSION['pk_usuario'], 0);
-}
+    if(mysqli_num_rows($carritoActivo)>0){
+        //Si el usuario tiene un carro activo, busco el producto en el carro
+        $carrito=mysqli_fetch_assoc($carritoActivo);
+        $_SESSION['fkventa']=$carrito['pk_venta'];
+
+    }else{
+        $_SESSION['fkventa']=$venta->insertar(null, 0, $_SESSION['pk_usuario'], 0);
+    }
 //Obtengo los datos del producto.
 $datosProducto=mysqli_fetch_assoc($producto->mostrarPorId($fkproducto));
 
