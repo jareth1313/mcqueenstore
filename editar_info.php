@@ -17,7 +17,7 @@ $respuesta=$usuario->buscar($pkusu);
                 while($row=mysqli_fetch_assoc($respuesta)){
                 ?>
                 <form action="formularios/editar_informacion.php" method="POST">
-                    <h1>Editar Información</h1>
+                    <h2>Editar Información</h2>
                     <input value="<?=$row['pk_usuario']?>"  class="controls" type="hidden" name="pk_usu">
 
                     <label>Nombre:</label>
