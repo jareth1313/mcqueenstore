@@ -58,14 +58,14 @@ class Venta {
         $sql="SELECT * FROM venta v INNER JOIN usuario u ON v.fk_usuario=u.pk_usuario 
         INNER JOIN detalle_venta dv ON dv.fk_venta=v.pk_venta INNER JOIN producto p ON 
         p.pk_producto=dv.fk_producto INNER JOIN direccion_usu du ON du.pk_direccion_usu=v.fk_direccion_usu 
-        INNER JOIN met_pago mp ON v.fk_met_pago=mp.pk_met_pago WHERE v.fk_usuario='{$pkusuario}' AND v.estatus=1";
+        INNER JOIN met_pago mp ON v.fk_met_pago=mp.pk_met_pago WHERE v.fk_usuario='{$pkusuario}' AND v.estatus='Entregado'";
         $respuesta=$this->conexion->query($sql);
         return $respuesta;    
     }
 
     //Manejar por pedidos 
     function historial_venta(){
-        $sql= "SELECT * FROM venta WHERE estatus=1";
+        $sql= "SELECT * FROM venta WHERE estatus='Entregado'";
         $respuesta=$this->conexion->query($sql);
         return $respuesta;  
     }
@@ -74,6 +74,12 @@ class Venta {
     function detalle_venta($pk_venta){
         $sql= "SELECT * FROM venta v INNER JOIN detalle_venta dv ON v.pk_venta=dv.fk_venta 
         INNER JOIN producto p ON dv.fk_producto=p.pk_producto WHERE v.pk_venta='{$pk_venta}'";
+        $respuesta=$this->conexion->query($sql);
+        return $respuesta;  
+    }
+
+    function cambiarEstatus($pkventa){
+        $sql="UPDATE venta SET estatus='Entregado' WHERE pk_venta='{$pkventa}' ";
         $respuesta=$this->conexion->query($sql);
         return $respuesta;  
     }

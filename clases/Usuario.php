@@ -11,8 +11,8 @@ class Usuario{
         return $this->conexion->insert_id;
     }
     
-    function insertarAdmin($nom_usu, $ap_usu, $am_usu, $correo, $passwrd,$tipo_usu){
-        $consulta="INSERT INTO usuario(pk_usuario, nom_usu, ap_usu, am_usu, correo, passwrd, tipo_usu, estatus) VALUES (NULL, '{$nom_usu}', '{$ap_usu}', '{$am_usu}', '{$correo}', '{$passwrd}', '{$tipo_usu}', 1)";
+    function insertarAdmin($nom_usu, $ap_usu, $am_usu, $correo, $passwrd){
+        $consulta="INSERT INTO usuario(pk_usuario, nom_usu, ap_usu, am_usu, correo, passwrd, tipo_usu, estatus) VALUES (NULL, '{$nom_usu}', '{$ap_usu}', '{$am_usu}', '{$correo}', '{$passwrd}', 1, 1)";
         $respuesta=$this->conexion->query($consulta);
         return $this->conexion->insert_id;
     }

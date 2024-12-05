@@ -1,5 +1,5 @@
 <?php 
- session_start();
+session_start();
 if(isset($_SESSION['pk_usuario'])):
   $ruta="usuario.php";
 else:
@@ -172,7 +172,7 @@ endif;
                   <?php
                     if(isset($_SESSION['tipousu'])){
                       if( $_SESSION['tipousu']==1){
-                        echo '<a href="formulario_usuario.php" class="nav-link me-4">Agregar Administrador</a>';
+                        echo '<a href="formulario_admin.php" class="nav-link me-4">Agregar Administrador</a>';
                       }
                     }
                   ?>
@@ -211,7 +211,13 @@ endif;
                       <a href="carrito.php" class="dropdown-item">Carrito</a>
                     </li>
                     <li>
-                      <a href="mostrar_admins.php" class="dropdown-item">Ver Administradores</a>
+                      <?php
+                        if(isset($_SESSION['tipousu'])){
+                          if( $_SESSION['tipousu']==1){
+                            echo '<a href="mostrar_admins.php" class="dropdown-item">Ver Administradores</a>';
+                          }
+                        }
+                      ?>
                     </li>
                     <li>
                       <a href="contact.html" class="dropdown-item">Contáctanos</a>
