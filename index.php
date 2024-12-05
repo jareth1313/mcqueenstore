@@ -1,6 +1,11 @@
 <?php
 include('nav.php');
 ?>
+
+<!-- agregar icono a la pestaña
+  -->
+<!-- <link rel="shortcut icon" type="image/x-icon" href="images/fotopag.png"> -->
+
     <section id="billboard" class="position-relative overflow-hidden bg-light-blue">
       <div class="swiper main-swiper">
         <div class="swiper-wrapper">
@@ -16,7 +21,7 @@ include('nav.php');
                 <div class="col-md-5">
                   <div class="image-holder">
 <!-- imagen del banner -->
-                    <img src="images/banner-image.png" alt="banner">
+                    <img src="images/banner.png" alt="banner">
                   </div>
                 </div>
               </div>
@@ -33,7 +38,7 @@ include('nav.php');
                 </div>
                 <div class="col-md-5">
                   <div class="image-holder">
-                    <img src="images/banner-image.png" alt="banner">
+                    <img src="images/banner.png" alt="banner">
                   </div>
                 </div>
               </div>
@@ -179,8 +184,8 @@ include('nav.php');
       <div class="swiper-pagination position-absolute text-center"></div>
     </section>
     <!-- Sección de relojes -->
-    <section id="smart-watches" class="product-store padding-large position-relative">
-      <div class="container">
+    <!-- <section id="smart-watches" class="product-store padding-large position-relative"> -->
+      <!-- <div class="container">
         <div class="row">
           <div class="display-header d-flex justify-content-between pb-3">
             <h2 class="display-7 text-dark text-uppercase">Procesadores</h2>
@@ -285,14 +290,14 @@ include('nav.php');
         </div>
       </div>
       <div class="swiper-pagination position-absolute text-center"></div>
-    </section>
-    <section id="yearly-sale" class="bg-light-blue overflow-hidden mt-5 padding-xlarge" style="background-image: url('images/single-image1.png');background-position: right; background-repeat: no-repeat;">
+    </section> -->
+    <section id="yearly-sale" class="bg-light-blue overflow-hidden mt-5 padding-xlarge" style="background-image: url('images/banner2.jpg');background-position: right; background-repeat: no-repeat;">
       <div class="row d-flex flex-wrap align-items-center">
         <div class="col-md-6 col-sm-12">
           <div class="text-content offset-4 padding-medium">
             <h3>10% de descuento</h3>
-            <h2 class="display-2 pb-5 text-uppercase text-dark">Ventas de Año Nuevo</h2>
-            <a href="shop.html" class="btn btn-medium btn-dark text-uppercase btn-rounded-none">Comprar</a>
+            <h2 class="display-2 pb-5 text-uppercase text-dark">Ventas por el Black Friday</h2>
+            <!-- <a href="shop.html" class="btn btn-medium btn-dark text-uppercase btn-rounded-none">Comprar</a> -->
           </div>
         </div>
         <div class="col-md-6 col-sm-12">
@@ -306,55 +311,55 @@ include('nav.php');
           <div class="display-header d-flex justify-content-between pb-3">
             <h2 class="display-7 text-dark text-uppercase">Últimas novedades</h2>
             <div class="btn-right">
-              <a href="blog.html" class="btn btn-medium btn-normal text-uppercase">Leer blog</a>
+              <!-- <a href="index.php" class="btn btn-medium btn-normal text-uppercase">Leer blog</a> -->
             </div>
           </div>
           <div class="post-grid d-flex flex-wrap justify-content-between">
             <div class="col-lg-4 col-sm-12">
               <div class="card border-none me-3">
                 <div class="card-image">
-                  <img src="images/post-item1.jpg" alt="" class="img-fluid">
+                  <img src="images/apexprotkl.jpg" alt="" class="img-fluid">
                 </div>
               </div>
               <div class="card-body text-uppercase">
                 <div class="card-meta text-muted">
                   <span class="meta-date">22 de febrero, 2024</span>
-                  <span class="meta-category">- Accesorios</span>
+                  <span class="meta-category">- ¡APROVECHA LAS OFERTAS EN TECLADOS Y RATONES GAMING!</span>
                 </div>
                 <h3 class="card-title">
-                  <a href="#">Obten accesorios asombrosos este 2024</a>
+                  <label>Renueva tu experiencia con periféricos de alta calidad a precios irresistibles.</label>
                 </h3>
               </div>
             </div>
             <div class="col-lg-4 col-sm-12">
               <div class="card border-none me-3">
                 <div class="card-image">
-                  <img src="images/post-item2.jpg" alt="" class="img-fluid">
+                  <img src="images/inteldisplay.jpg" alt="" class="img-fluid">
                 </div>
               </div>
               <div class="card-body text-uppercase">
                 <div class="card-meta text-muted">
                   <span class="meta-date">25 de febrero, 2024</span>
-                  <span class="meta-category">- Tecnología</span>
+                  <span class="meta-category">- NUEVOS PROCESADORES INTEL Y AMD DISPONIBLES</span>
                 </div>
                 <h3 class="card-title">
-                  <a href="#">La mejor tecnología para tu vida</a>
+                  <label>Descubre el poder de las últimas generaciones de procesadores para potenciar tu PC.</label>
                 </h3>
               </div>
             </div>
             <div class="col-lg-4 col-sm-12">
               <div class="card border-none me-3">
                 <div class="card-image">
-                  <img src="images/post-item3.jpg" alt="" class="img-fluid">
+                  <img src="images/pcdisplay.jpg" alt="" class="img-fluid">
                 </div>
               </div>
               <div class="card-body text-uppercase">
                 <div class="card-meta text-muted">
                   <span class="meta-date">17 de Marzo, 2023</span>
-                  <span class="meta-category">- Cámaras</span>
+                  <span class="meta-category">- EQUIPOS ARMADOS PARA GAMERS Y PROFESIONALES</span>
                 </div>
                 <h3 class="card-title">
-                  <a href="#">Lo mejor en cámaras compactas</a>
+                  <label>Obtén computadoras personalizadas según tus necesidades, listas para cualquier desafío.</label>
                 </h3>
               </div>
             </div>
@@ -472,7 +477,7 @@ include('nav.php');
       </div>
       <div class="swiper-pagination"></div>
     </section>
-    <section id="instagram" class="padding-large overflow-hidden no-padding-top">
+    <!-- <section id="instagram" class="padding-large overflow-hidden no-padding-top">
       <div class="container">
         <div class="row">
           <div class="display-header text-uppercase text-dark text-center pb-3">
@@ -532,7 +537,7 @@ include('nav.php');
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <footer id="footer" class="overflow-hidden">
       <div class="container">
         <div class="row">
