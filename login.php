@@ -13,10 +13,10 @@
         <form action="validar.php" method="POST">
             <h2>Iniciar sesión</h2>
 
-            <label for="correo">Correo</label>
+            <label for="correo">Correo:</label>
             <input type="email" id="correo" name="correo" required>
 
-            <label for="pass">Contraseña</label>
+            <label for="pass">Contraseña:</label>
             <input type="password" id="pass" name="pass" required>
             
             <input type="submit" value="Iniciar sesión">
