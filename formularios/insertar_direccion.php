@@ -8,9 +8,11 @@ $fkusuario=$_SESSION['pk_usuario'];
 $calle=$_POST['calle'];
 $colonia=$_POST['colonia'];
 $ciudad=$_POST['ciudad'];
+$referencia=$_POST['referencia'];
+$num_ext=$_POST['num_ext'];
 
 
-$resultado=$direccion->insertarDireccion($calle, $colonia, $ciudad, $fkusuario);
+$resultado=$direccion->insertarDireccion($calle, $numExt, $referencia, $colonia, $ciudad, $fkusuario);
 
 if($resultado){
     echo "<script>
