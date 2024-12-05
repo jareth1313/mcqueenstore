@@ -216,13 +216,18 @@ include('nav.php');
 
     <form action="formularios/insertar_direccion.php" method="POST">
       Calle
-    <input type="text" id="calle" name="calle">
+      <input type="text" id="calle" name="calle">
       Colonia
       <input type="text" id="colonia" name="colonia">
       Ciudad
       <input type="text" id="ciudad" name="ciudad">
-    
-      <input class="btn" type="submit" value="Guardar">
+      <br>
+      Referencia
+      <input type="text" id="colonia" name="referencia">
+      Número Exterior
+      <input type="text" id="ciudad" name="num_ext">
+
+      <input class="btn" style="border: 1px black solid;" type="submit" value="Guardar">
     </form>
 
     <script

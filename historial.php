@@ -3,6 +3,7 @@ include('nav.php');
 include('clases/Venta.php');
 $venta=new Venta();
 
+if(isset($_SESSION['pk_usuario'])){
 $datos=$venta->historial($_SESSION['pk_usuario']);
 
 ?>
@@ -13,10 +14,12 @@ $datos=$venta->historial($_SESSION['pk_usuario']);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabla Estilizada</title>
+    <title>ss</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
+    <h1>Historial de Compras</h1>
+    
     <div class="table-container">
         <table>
             <thead>
@@ -44,7 +47,7 @@ $datos=$venta->historial($_SESSION['pk_usuario']);
                     <td><?=$fila['hora_venta']?></td>
                     <td><?="Calle: ".$fila['calle']." Colonia: ".$fila['colonia']?></td>
                     <td><?=$fila['nom_met_pago']?></td>
-                    <td><?=$fila['estatus']?></td>
+                    <td><?=$fila['estatus_venta']?></td>
                 </tr>
             </tbody>
             <?php
@@ -52,5 +55,12 @@ $datos=$venta->historial($_SESSION['pk_usuario']);
             ?>
         </table>
     </div>
+    <?php
+            }else{
+                    echo "<script>
+                    location.href='index.php'
+                    </script>";
+                };
+                ?>
 </body>
 </html>

@@ -17,7 +17,7 @@ endif;
 
 <h2>Dirección</h2>
 
-<a href="agregar_direccion.php">Agregar Dirección</a> <br><br>
+<a style="color: black; padding: 5px;" href="agregar_direccion.php">Agregar Dirección</a> <br><br>
 
 <form action="metodoPago.php" method="POST">
     <select name="pk_direccion" required> 

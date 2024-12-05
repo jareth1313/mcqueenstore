@@ -33,24 +33,20 @@ $datos=$venta->historial_venta();
             <tbody>
             <?php
                 while($fila=mysqli_fetch_array($datos)){
-                $productos=$venta->detalle_venta($fila['pk_venta']);
-
-            
-
-                
+                $productos=$venta->detalle_venta($fila['pk_venta']);    
             ?>
             <tr style="background-color: gray">
                 <td><?="Pedido: ".$fila['pk_venta']; ?></td>
                 <td><?="Fecha: ".$fila['fecha_venta']; ?></td>
                 <td><?="Hora: ".$fila['hora_venta']; ?></td>
                 <td class="status">
-                <?=$fila['estatus'];?> 
+                <?=$fila['estatus_venta']; if($fila['estatus_venta']=="En camino"){?> 
                <?= '<a class="btn" style=" border: 1px black solid;
-                color: black; background-color: white;" href="actualizar_estatus.php?pk_venta='.$fila['pk_venta'].'">Entregado</a>' ?>
-        </td>
+                color: black; background-color: white;" href="actualizar_estatus.php?pk_venta='.$fila['pk_venta'].'">Entregado</a>' ?></td>
             </tr>
         
             <?php
+                }
                  while($fila2=mysqli_fetch_array($productos)){
             ?>
                 <tr>

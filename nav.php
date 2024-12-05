@@ -177,12 +177,12 @@ endif;
                     }
                   ?>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                   <a class="nav-link me-4" href="#mobile-products">Productos</a>
-                </li>
-                <li class="nav-item">
+                </li> -->
+                <!-- <li class="nav-item">
                   <a class="nav-link me-4" href="#smart-watches">Relojes</a>
-                </li>
+                </li> -->
                 <li class="nav-item dropdown">
                   <a class="nav-link me-4 dropdown-toggle link-dark" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Páginas</a>
                   <ul class="dropdown-menu">
@@ -211,6 +211,15 @@ endif;
                       <a href="carrito.php" class="dropdown-item">Carrito</a>
                     </li>
                     <li>
+                    <?php
+                        if(isset($_SESSION['tipousu'])){
+                          if( $_SESSION['tipousu']==0){
+                            echo ' <a href="historial.php" class="dropdown-item">Historial de Compras</a>';
+                          }
+                        }
+                      ?>
+                    </li>
+                    <li>
                       <?php
                         if(isset($_SESSION['tipousu'])){
                           if( $_SESSION['tipousu']==1){
@@ -218,12 +227,6 @@ endif;
                           }
                         }
                       ?>
-                    </li>
-                    <li>
-                      <a href="contact.html" class="dropdown-item">Contáctanos</a>
-                    </li>
-                    <li>
-                      <a href="about.html" class="dropdown-item">Sobre nosotros</a>
                     </li>
                   </ul>
                 </li>

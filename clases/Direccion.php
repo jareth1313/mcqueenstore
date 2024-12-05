@@ -5,8 +5,8 @@ class Direccion{
         $this->conexion=new Conexion();
     }
 
-    function insertarDireccion($calle, $colonia, $ciudad, $fkusuario){
-        $sql="INSERT INTO direccion_usu VALUES(NULL, '{$calle}', NULL, NULL, '{$colonia}', '{$ciudad}', '{$fkusuario}', 1)";
+    function insertarDireccion($calle, $numExt, $referencia, $colonia, $ciudad, $fkusuario){
+        $sql="INSERT INTO direccion_usu VALUES(NULL, '{$calle}', '{$numExt}', '{$referencia}', '{$colonia}', '{$ciudad}', '{$fkusuario}', 1)";
         $respuesta=$this->conexion->query($sql);
         return $this->conexion->insert_id;
     }

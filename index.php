@@ -124,9 +124,15 @@ include('nav.php');
             <div class="btn-right">
                 
             </div>
-            <!-- <div class="btn-right">
-              <a href="shop.html" class="btn btn-medium btn-normal text-uppercase">Comprar</a>
-            </div> -->
+            <div class="btn-right">
+              <?php
+                    if(isset($_SESSION['tipousu'])){
+                      if( $_SESSION['tipousu']==1){
+                      echo '<a href="producto.php" class="btn btn-medium btn-normal text-uppercase">Agregar Producto</a>';
+                      }
+                    }
+                  ?>
+            </div>
           </div>
           <div class="swiper product-swiper">
             <div class="swiper-wrapper">
@@ -183,114 +189,6 @@ include('nav.php');
       </div>
       <div class="swiper-pagination position-absolute text-center"></div>
     </section>
-    <!-- Sección de relojes -->
-    <!-- <section id="smart-watches" class="product-store padding-large position-relative"> -->
-      <!-- <div class="container">
-        <div class="row">
-          <div class="display-header d-flex justify-content-between pb-3">
-            <h2 class="display-7 text-dark text-uppercase">Procesadores</h2>
-            <div class="btn-right">
-              <a href="shop.html" class="btn btn-medium btn-normal text-uppercase">Comprar</a>
-            </div>
-          </div>
-          <div class="swiper product-watch-swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="product-card position-relative">
-                  <div class="image-holder">
-                    <img src="images/product-item6.jpg" alt="product-item" class="img-fluid">
-                  </div>
-                  <div class="cart-concern position-absolute">
-                    <div class="cart-button d-flex">
-                      <a href="#" class="btn btn-medium btn-black">Añadir a carrito<svg class="cart-outline"><use xlink:href="#cart-outline"></use></svg></a>
-                    </div>
-                  </div>
-                  <div class="card-detail d-flex justify-content-between align-items-baseline pt-3">
-                    <h3 class="card-title text-uppercase">
-                      <a href="#">Pink watch</a>
-                    </h3>
-                    <span class="item-price text-primary">$870</span>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="product-card position-relative">
-                  <div class="image-holder">
-                    <img src="images/product-item7.jpg" alt="product-item" class="img-fluid">
-                  </div>
-                  <div class="cart-concern position-absolute">
-                    <div class="cart-button d-flex">
-                      <a href="#" class="btn btn-medium btn-black">Añadir a carrito<svg class="cart-outline"><use xlink:href="#cart-outline"></use></svg></a>
-                    </div>
-                  </div>
-                  <div class="card-detail d-flex justify-content-between align-items-baseline pt-3">
-                    <h3 class="card-title text-uppercase">
-                      <a href="#">Heavy watch</a>
-                    </h3>
-                    <span class="item-price text-primary">$680</span>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="product-card position-relative">
-                  <div class="image-holder">
-                    <img src="images/product-item8.jpg" alt="product-item" class="img-fluid">
-                  </div>
-                  <div class="cart-concern position-absolute">
-                    <div class="cart-button d-flex">
-                      <a href="#" class="btn btn-medium btn-black">Añadir a carrito<svg class="cart-outline"><use xlink:href="#cart-outline"></use></svg></a>
-                    </div>
-                  </div>
-                  <div class="card-detail d-flex justify-content-between align-items-baseline pt-3">
-                    <h3 class="card-title text-uppercase">
-                      <a href="#">spotted watch</a>
-                    </h3>
-                    <span class="item-price text-primary">$750</span>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="product-card position-relative">
-                  <div class="image-holder">
-                    <img src="images/product-item9.jpg" alt="product-item" class="img-fluid">
-                  </div>
-                  <div class="cart-concern position-absolute">
-                    <div class="cart-button d-flex">
-                      <a href="#" class="btn btn-medium btn-black">Añadir a carrito<svg class="cart-outline"><use xlink:href="#cart-outline"></use></svg></a>
-                    </div>
-                  </div>
-                  <div class="card-detail d-flex justify-content-between align-items-baseline pt-3">
-                    <h3 class="card-title text-uppercase">
-                      <a href="#">black watch</a>
-                    </h3>
-                    <span class="item-price text-primary">$650</span>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="product-card position-relative">
-                  <div class="image-holder">
-                    <img src="images/product-item10.jpg" alt="product-item" class="img-fluid">
-                  </div>
-                  <div class="cart-concern position-absolute">
-                    <div class="cart-button d-flex">
-                      <a href="#" class="btn btn-medium btn-black">Añadir a carrito<svg class="cart-outline"><use xlink:href="#cart-outline"></use></svg></a>
-                    </div>
-                  </div>
-                  <div class="card-detail d-flex justify-content-between pt-3">
-                    <h3 class="card-title text-uppercase">
-                      <a href="#">black watch</a>
-                    </h3>
-                    <span class="item-price text-primary">$750</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="swiper-pagination position-absolute text-center"></div>
-    </section> -->
     <section id="yearly-sale" class="bg-light-blue overflow-hidden mt-5 padding-xlarge" style="background-image: url('images/banner2.jpg');background-position: right; background-repeat: no-repeat;">
       <div class="row d-flex flex-wrap align-items-center">
         <div class="col-md-6 col-sm-12">
@@ -477,67 +375,6 @@ include('nav.php');
       </div>
       <div class="swiper-pagination"></div>
     </section>
-    <!-- <section id="instagram" class="padding-large overflow-hidden no-padding-top">
-      <div class="container">
-        <div class="row">
-          <div class="display-header text-uppercase text-dark text-center pb-3">
-            <h2 class="display-7">Hecha un vistazo en Insta</h2>
-          </div>
-          <div class="d-flex flex-wrap">
-            <figure class="instagram-item pe-2">
-              <a href="" class="image-link position-relative">
-                <img src="images/insta-item1.jpg" alt="instagram" class="insta-image">
-                <div class="icon-overlay position-absolute d-flex justify-content-center">
-                  <svg class="instagram">
-                    <use xlink:href="#instagram"></use>
-                  </svg>
-                </div>
-              </a>
-            </figure>
-            <figure class="instagram-item pe-2">
-              <a href="" class="image-link position-relative">
-                <img src="images/insta-item2.jpg" alt="instagram" class="insta-image">
-                <div class="icon-overlay position-absolute d-flex justify-content-center">
-                  <svg class="instagram">
-                    <use xlink:href="#instagram"></use>
-                  </svg>
-                </div>
-              </a>
-            </figure>
-            <figure class="instagram-item pe-2">
-              <a href="" class="image-link position-relative">
-                <img src="images/insta-item3.jpg" alt="instagram" class="insta-image">
-                <div class="icon-overlay position-absolute d-flex justify-content-center">
-                  <svg class="instagram">
-                    <use xlink:href="#instagram"></use>
-                  </svg>
-                </div>
-              </a>
-            </figure>
-            <figure class="instagram-item pe-2">
-              <a href="" class="image-link position-relative">
-                <img src="images/insta-item4.jpg" alt="instagram" class="insta-image">
-                <div class="icon-overlay position-absolute d-flex justify-content-center">
-                  <svg class="instagram">
-                    <use xlink:href="#instagram"></use>
-                  </svg>
-                </div>
-              </a>
-            </figure>
-            <figure class="instagram-item pe-2">
-              <a href="" class="image-link position-relative">
-                <img src="images/insta-item5.jpg" alt="instagram" class="insta-image">
-                <div class="icon-overlay position-absolute d-flex justify-content-center">
-                  <svg class="instagram">
-                    <use xlink:href="#instagram"></use>
-                  </svg>
-                </div>
-              </a>
-            </figure>
-          </div>
-        </div>
-      </div>
-    </section> -->
     <footer id="footer" class="overflow-hidden">
       <div class="container">
         <div class="row">
@@ -550,86 +387,50 @@ include('nav.php');
                   <div class="social-links">
                     <ul class="d-flex list-unstyled">
                       <li>
-                        <a href="#">
+                        <p>
                           <svg class="facebook">
                             <use xlink:href="#facebook" />
                           </svg>
-                        </a>
+                        </p>
                       </li>
                       <li>
-                        <a href="#">
+                        <p>
                           <svg class="instagram">
                             <use xlink:href="#instagram" />
                           </svg>
-                        </a>
+                        </p>
                       </li>
                       <li>
-                        <a href="#">
+                        <p>
                           <svg class="twitter">
                             <use xlink:href="#twitter" />
                           </svg>
-                        </a>
+                        </p>
                       </li>
                       <li>
-                        <a href="#">
+                        <p>
                           <svg class="linkedin">
                             <use xlink:href="#linkedin" />
                           </svg>
-                        </a>
+                        </p>
                       </li>
                       <li>
-                        <a href="#">
+                        <p>
                           <svg class="youtube">
                             <use xlink:href="#youtube" />
                           </svg>
-                        </a>
+                        </p>
                       </li>
                     </ul>
                   </div>
                 </div>
               </div>
-              <!-- <div class="col-lg-2 col-sm-6 pb-3">
-                <div class="footer-menu text-uppercase">
-                  <h5 class="widget-title pb-2">Enlaces rápidos</h5>
-                  <ul class="menu-list list-unstyled text-uppercase">
-                    <li class="menu-item pb-2">
-                      <a href="#">Home</a>
-                    </li>
-
-                    <li class="menu-item pb-2">
-                      <a href="#">Contáctanos</a>
-                    </li>
-                  </ul>
-                </div>
-              </div> -->
-              <!-- <div class="col-lg-3 col-sm-6 pb-3">
-                <div class="footer-menu text-uppercase">
-                  <h5 class="widget-title pb-2">Ayúda e información adicional</h5>
-                  <ul class="menu-list list-unstyled">
-
-                      <a href="#">Rastrea tus pedidos</a>
-                    </li>
-                    <li class="menu-item pb-2">
-                      <a href="#">Políticas de reembolso</a>
-                    </li>
-                    <li class="menu-item pb-2">
-                      <a href="#">Envío y Entrega</a>
-                    </li>
-                    <li class="menu-item pb-2">
-                      <a href="#">Contáctanos</a>
-                    </li>
-                    <li class="menu-item pb-2">
-                      <a href="#">Preguntas frecuentes</a>
-                    </li>
-                  </ul>
-                </div>
-              </div> -->
               <div class="col-lg-3 col-sm-6 pb-3">
                 <div class="footer-menu contact-item">
                   <h5 class="widget-title text-uppercase pb-2">Contáctanos</h5>
-                  <p>¿Tienes alguna duda o sugerencia? <a href="mailto:">mcqueenstore@gmail.com</a>
+                  <p>¿Tienes alguna duda o sugerencia? <p>mcqueenstore@gmail.com</p>
                   </p>
-                  <p>¿Necesitas soporte? Solo llamanos. <a href="">+55 111 222 333 44</a>
+                  <p>¿Necesitas soporte? Solo llamanos. <p>+52 695-138-4166</p>
                   </p>
                 </div>
               </div>
