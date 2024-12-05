@@ -2,9 +2,15 @@
 include('clases/Usuario.php');
 $usuario=New Usuario;
 
+
+require_once('clases/conexion.php');
+$conexion=new Conexion();
+
 # inicia sesión con el correo y la contraseña
-$correo=$_POST["correo"];
-$passwrd=$_POST["pass"];
+$correo=$conexion->real_escape_string($_POST["correo"]);
+$passwrd=$conexion->real_escape_string($_POST["pass"]);
+#Con el real_escape_string se evita le inyección sql de (OR 1=1)
+
 
 $resultado=$usuario->validar($correo,$passwrd);
 $num_rows=mysqli_num_rows($resultado);

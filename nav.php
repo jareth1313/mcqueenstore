@@ -22,6 +22,7 @@ endif;
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="css/formularios.css">
+    <link rel="stylesheet" href="css/usuario.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -204,10 +205,13 @@ endif;
                       ?>
                     </li>
                     <li>
+                    <a href="<?=$ruta?>" class="dropdown-item">Usuario</a>
+                    </li>
+                    <li>
                       <a href="carrito.php" class="dropdown-item">Carrito</a>
                     </li>
                     <li>
-                      <a href="blog.html" class="dropdown-item"></a>
+                      <a href="mostrar_admins.php" class="dropdown-item">Ver Administradores</a>
                     </li>
                     <li>
                       <a href="contact.html" class="dropdown-item">Contáctanos</a>

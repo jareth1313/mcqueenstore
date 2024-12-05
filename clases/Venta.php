@@ -13,6 +13,13 @@ class Venta {
         return $id;
     }
 
+    function contar(){
+        $sql="SELECT COUNT(*) as numero FROM venta WHERE estatus=1";
+        $respuesta=$this->conexion->query($sql);
+        return $respuesta;
+
+    }
+
     function insertarDetalle($fkproducto, $fkventa, $cantidad, $subtotal, $estatus){
         $sql="INSERT INTO detalle_venta(pk_detalle_venta, fk_producto, fk_venta, cantidad, subtotal, estatus
         VALUES (NULL, '{$fkproducto}', '{$fkventa}', '{$cantidad}', '{$subtotal}', '{$estatus}')";
@@ -35,8 +42,8 @@ class Venta {
         return $respuesta;
     }
 
-    function realizarCompra($pkventa, $fkpago, $fkdireccion, $total){
-        $sql="UPDATE venta SET fk_met_pago='{$fkpago}', fk_direccion_usu='{$fkdireccion}', total='{$total}', estatus=1 WHERE pk_venta='{$pkventa}' ";
+    function realizarCompra($pkventa, $folio, $fkpago, $fkdireccion, $total){
+        $sql="UPDATE venta SET fk_met_pago='{$fkpago}', folio='{$folio}',  fk_direccion_usu='{$fkdireccion}', total='{$total}', estatus=1 WHERE pk_venta='{$pkventa}' ";
         $respuesta=$this->conexion->query($sql);
         return $respuesta;
     }
@@ -56,9 +63,17 @@ class Venta {
         return $respuesta;    
     }
 
+    //Manejar por pedidos 
     function historial_venta(){
+        $sql= "SELECT * FROM venta WHERE estatus=1";
+        $respuesta=$this->conexion->query($sql);
+        return $respuesta;  
+    }
+
+    // Fucción para organizar por pedidos 
+    function detalle_venta($pk_venta){
         $sql= "SELECT * FROM venta v INNER JOIN detalle_venta dv ON v.pk_venta=dv.fk_venta 
-        INNER JOIN producto p ON dv.fk_producto=p.pk_producto WHERE v.estatus=1";
+        INNER JOIN producto p ON dv.fk_producto=p.pk_producto WHERE v.pk_venta='{$pk_venta}'";
         $respuesta=$this->conexion->query($sql);
         return $respuesta;  
     }

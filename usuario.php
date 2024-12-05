@@ -6,7 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Usuario</title>
-    <link rel="stylesheet" href="css/usuario.css">
+    <link rel="stylesheet" href="css/formulario.css?d=1">
+    
+
 </head>
 
 <body>
@@ -27,25 +29,21 @@
                 while($row=mysqli_fetch_assoc($respuesta)){
                     ?>
                 <div class="x">
-                    <a class="btn" href="usuario.php">Información Personal</a>
+                    <?php
+                    echo '<a href="editar_info.php?pk_usuario='.$row['pk_usuario'].'" class="btn">Editar Información</a>'
+                    ?>
                     <a class="btn" href="direccion.php">Dirección</a>
                     <a class="btn" href="historial.php">Historial de Compras</a>
                 </div>
 
-                <div class="xx" id="editarInfo">
-                    <a class="btn" href="editar_info.php">Editar Información</a>
-
-                    <label>Nombre:</label> <br>
-                    <input value="<?=$row['nom_usu']?>" readonly class="controls" type="text" name="nombres" required> <br>
-
-                    <label>Apellido Paterno:</label> <br>
-                    <input value="<?=$row['ap_usu']?>" readonly class="controls" type="text" name="apaterno" required> <br>
-
-                    <label>Apellido Materno:</label> <br>
-                    <input value="<?=$row['am_usu']?>" readonly class="controls" type="text" name="amaterno"> <br> 
-
-                    <label>Email:</label> <br>
-                    <input value="<?=$row['correo']?>" readonly class="controls" type="text" name="amaterno"> <br> 
+                    <label>Nombres:</label>
+                    <input class="form-control" type="text" value="<?=$row['nom_usu']?>" disabled readonly name="nombres" required readonly class="controls"> <br>
+                    <label>Apellido Paterno:</label>
+                    <input class="form-control" type="text" value="<?=$row['ap_usu']?>" disabled readonly name="apaterno" required readonly class="controls"> <br>
+                    <label>Apellido Materno:</label>
+                    <input class="form-control" type="text" value="<?=$row['am_usu']?>" disabled readonly name="amaterno" required readonly class="controls"> <br>
+                    <label>Email:</label>
+                    <input class="form-control" type="text" value="<?=$row['correo']?>" disabled readonly name="amaterno" required readonly class="controls"> <br>
                 </div> 
 
                 <div class="conte-link">
