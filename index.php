@@ -184,6 +184,8 @@ include('nav.php');
       <div class="swiper-pagination position-absolute text-center"></div>
     </section>
     <!-- Sección de relojes -->
+    <!-- <section id="smart-watches" class="product-store padding-large position-relative"> -->
+      <!-- <div class="container">
         <div class="row">
           <div class="display-header d-flex justify-content-between pb-3">
             <h2 class="display-7 text-dark text-uppercase">Procesadores</h2>
@@ -289,11 +291,12 @@ include('nav.php');
       </div>
       <div class="swiper-pagination position-absolute text-center"></div>
     </section> -->
+    <section id="yearly-sale" class="bg-light-blue overflow-hidden mt-5 padding-xlarge" style="background-image: url('images/banner2.jpg');background-position: right; background-repeat: no-repeat;">
       <div class="row d-flex flex-wrap align-items-center">
         <div class="col-md-6 col-sm-12">
           <div class="text-content offset-4 padding-medium">
             <h3>10% de descuento</h3>
-            <h2 class="display-2 pb-5 text-uppercase text-dark">Ventas por el Black Friday</h2>
+            <h2 class="display-2 pb-5 text-uppercase text-dark">Ventas de Año Nuevo</h2>
             <!-- <a href="shop.html" class="btn btn-medium btn-dark text-uppercase btn-rounded-none">Comprar</a> -->
           </div>
         </div>
@@ -308,7 +311,7 @@ include('nav.php');
           <div class="display-header d-flex justify-content-between pb-3">
             <h2 class="display-7 text-dark text-uppercase">Últimas novedades</h2>
             <div class="btn-right">
-              <!-- <a href="index.php" class="btn btn-medium btn-normal text-uppercase">Leer blog</a> -->
+              <!-- <a href="blog.html" class="btn btn-medium btn-normal text-uppercase">Leer blog</a> -->
             </div>
           </div>
           <div class="post-grid d-flex flex-wrap justify-content-between">
@@ -590,17 +593,17 @@ include('nav.php');
                   <h5 class="widget-title pb-2">Enlaces rápidos</h5>
                   <ul class="menu-list list-unstyled text-uppercase">
                     <li class="menu-item pb-2">
-                      <a href="index.php">Home</a>
+                      <a href="#">Home</a>
                     </li>
-                    <!-- <li class="menu-item pb-2">
+                    <li class="menu-item pb-2">
                       <a href="#">Sobre nosotros</a>
-                    </li> -->
+                    </li>
                     <li class="menu-item pb-2">
                       <a href="#">Comprar</a>
                     </li>
-                    <!-- <li class="menu-item pb-2">
+                    <li class="menu-item pb-2">
                       <a href="#">Blogs</a>
-                    </li> -->
+                    </li>
                     <li class="menu-item pb-2">
                       <a href="#">Contáctanos</a>
                     </li>
@@ -611,12 +614,12 @@ include('nav.php');
                 <div class="footer-menu text-uppercase">
                   <h5 class="widget-title pb-2">Ayúda e información adicional</h5>
                   <ul class="menu-list list-unstyled">
-                    <!-- <li class="menu-item pb-2">
+                    <li class="menu-item pb-2">
                       <a href="#">Rastrea tus pedidos</a>
-                    </li> -->
-                    <!-- <li class="menu-item pb-2">
+                    </li>
+                    <li class="menu-item pb-2">
                       <a href="#">Políticas de reembolso</a>
-                    </li> -->
+                    </li>
                     <li class="menu-item pb-2">
                       <a href="#">Envío y Entrega</a>
                     </li>
